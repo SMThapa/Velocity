@@ -23,7 +23,8 @@ export const EnquireForm = () => {
   }
 
   return (
-    <div className="enquire-box">
+    <div className="centerContainer">
+      <div className="enquire-box">
       <div className="enquire-img">
         <img src={sideImg} alt="" />
       </div>
@@ -53,6 +54,7 @@ export const EnquireForm = () => {
           </p>
         )}
       </form>
+    </div>
     </div>
   )
 }

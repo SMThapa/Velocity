@@ -30,6 +30,7 @@ a{
   font-size: 14px;
   font-weight: 500;
   line-height: 26px;  
+  text-decoration: none;
 }
 
 
@@ -74,7 +75,8 @@ a{
   justify-content: space-between;
 }
 .uspCard{
-  width: 300px;
+  max-width: 300px;
+  padding: 0 10px;
 }
 .uspCard img{
   width: 100%;
@@ -133,10 +135,7 @@ a{
 
 /* enquire-form */
 .enquire-box{
-  max-width: 1200px;
-  width: 100%;
-  margin: auto auto;
-  margin-bottom: 70px;
+  margin-bottom: 130px;
   background-color: #F6EBD5;
 
   display: grid;

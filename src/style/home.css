@@ -90,7 +90,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 .marquee-div p{
     text-decoration: none;
@@ -127,6 +127,8 @@
     overflow: hidden;
 }
 .marquee-image.reverse{
+    max-width: 1440px;
+    margin: auto;
     margin-bottom: 100px;
 }
 .marquee-image .marquee-img{
@@ -156,6 +158,7 @@
 /* partner-with-us */
 .partner-with-us{
     display: flex;
+    align-items: center;
     gap: 70px;
     padding: 40px 0 50px 0;
 }
@@ -197,12 +200,16 @@
 
 /* scheme-style */
 .scheme{
+    max-width: 1440px;
     display: grid;
     grid-template-columns: 50% 50%;
-    margin: 25px 45px 100px 45px;
+    margin: 25px 45px 70px 45px;
     overflow: hidden;
     background-color: #F7E8CD;
     border-radius: 70px 0 70px 0;
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 70px;
 }
 .scheme .image-map img{
     width: 100%;
@@ -320,9 +327,11 @@
 }
 
 .testimonial-content{
+    max-width: 1440px;
     display: grid;
     grid-template-columns: 49% 49%;
     gap: 1%;
+    margin: auto;
 }
 .testimonial-content .image{
     margin-left:10%;

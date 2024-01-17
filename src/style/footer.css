@@ -1,0 +1,45 @@
+footer{
+    background-color: #FAF8E3;
+}
+.footer-contents{
+    max-width: 1440px;
+    margin: auto;
+    padding: 45px 15px 45px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.footer-contents .about-us{
+    padding: 0 15px;
+}
+.footer-contents h1{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    margin:29px;
+}
+.footer-contents p{
+    margin:6px 29px;
+}
+.footer-contents a{
+    color: #8F9992;
+    text-decoration: none;
+}
+.footer-contents a:hover{
+    color:#44332B;
+}
+.footer-contents .social-media a{
+    font-size: 18px;
+}
+.footer-buttom-content .copyright{
+    padding: 15px 0;
+    text-align: center;
+    margin: 0 25px;
+    border-top: 1px solid #44332B;
+}
+.footer-buttom-content .copyright p{
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
