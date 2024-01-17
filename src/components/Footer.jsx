@@ -30,10 +30,12 @@ export const Footer = () => {
         </div>
         <div className="social-media">
           <h1>Social Media  </h1>
-          <p><a href=""><i className="bi bi-twitter-x"></i></a></p>
-          <p><a href=""><i className="bi bi-facebook"></i></a></p>
-          <p><a href=""><i className="bi bi-instagram"></i></a></p>
-          <p><a href=""><i className="bi bi-linkedin"></i></a></p>
+          <div className="media-icons">
+            <p><a href=""><i className="bi bi-twitter-x"></i></a></p>
+            <p><a href=""><i className="bi bi-facebook"></i></a></p>
+            <p><a href=""><i className="bi bi-instagram"></i></a></p>
+            <p><a href=""><i className="bi bi-linkedin"></i></a></p>
+          </div>
         </div>
       </div>
       <div className="footer-buttom-content">

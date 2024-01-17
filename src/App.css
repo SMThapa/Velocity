@@ -48,6 +48,60 @@ a{
   height: auto;
   border-radius: 2px;
 }
+.card .image{
+  position: relative;
+  overflow: hidden;
+}
+
+.pop-ups-icons{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -40px;
+  width: 100%;
+  transition: all .5s ease;
+}
+.pop-ups-icons a{
+  color: black;
+}
+.pop-ups-icons .icons{
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+.pop-ups-icons .icons .showOnHover{
+  font-size: 12px;
+  font-weight: 300;
+  position: absolute;  
+  bottom: 40px;
+  background-color: #18171D;
+  color: white;
+  padding: 1px 8px;
+  opacity: 0;
+}
+.pop-ups-icons .bi{
+  font-size: 25px;
+  font-weight: 400;
+  padding: 8px 12px;
+  margin: 8px;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 50%;
+  transition: all .3s ease;
+} 
+.pop-ups-icons .bi:hover{
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+}
+.pop-ups-icons .bi:hover .showOnHover{
+  opacity: 1;
+}
+
+.card .image:hover .pop-ups-icons{
+  bottom: 30px;
+}
 .card img{
   width: 100%;
   aspect-ratio: 1/1;

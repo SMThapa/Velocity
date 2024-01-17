@@ -1,7 +1,10 @@
 import sideImg from '../assets/images/img9.jpg';
 import { useState } from 'react';
-export const EnquireForm = () => {
 
+
+export const EnquireForm = () => {
+  
+  const [enquire, setEnquire] = useState({});
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(null);
 
@@ -12,15 +15,33 @@ export const EnquireForm = () => {
     if(isValid === false){
       theEmail.focus();
       theEmail.style.borderColor = "red";
+      console.log(isValid);
+      return false
     }else{
-      theEmail.style.borderColor = "black";
+      theEmail.style.borderColor = "#8F9992";
+      console.log(isValid);
+      return true
     }  
   };
 
   function handeSubmit(event){
     event.preventDefault();
-    validateEmail(); 
-  }
+    if(validateEmail()){
+      setEnquire({
+        name :  event.target.name.value,
+        email : event.target.email.value,
+        number : event.target.number.value,
+        message : event.target.message.value
+      });
+  
+      event.target.name.value = null;
+      event.target.email.value = null;
+      event.target.number.value = null;
+      event.target.message.value = null;
+  
+      console.log(enquire);
+    }
+  }  
 
   return (
     <div className="centerContainer">

@@ -7,26 +7,29 @@ nav{
     box-shadow: rgba(0, 0, 0, 0.03) 0px 4px 6px -1px, rgba(0, 0, 0, 0.03) 0px 2px 4px -1px;
 }
 .theHeader{
-    max-width: 1440px;
+    max-width: 1660px;
     display: grid;
     grid-template-columns: 42.5% 15% 42.5%;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    padding: 0 2%;
+    padding: 0 1%;
 }
 .navItems{
     justify-self: start;
 }
 .navItems a{
     text-decoration: none;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding: 0 20px;
     vertical-align: sub;
     color: black;
     transition: all .5s ease;
 }
 .navItems a:hover{
+    color: red;
+}
+.navItems a.active{
     color: red;
 }
 .navLogo{
@@ -77,9 +80,18 @@ nav{
     padding: 0 20px;
     vertical-align: middle;
 }
-.navButtons .login a{
+.navButtons .login .bi{
+    font-size: 21px;
+    vertical-align: middle;
+    padding-left: 5px;
+    transition: all .5s ease;
+}
+.navButtons .login:hover .bi{
     color: black;
-    text-transform: uppercase;
+}
+.navButtons .login a{
+    color: white;
+    /* text-transform: uppercase; */
     vertical-align: sub;
     background-color: #d6ccc2;
     padding: 10px 16px;

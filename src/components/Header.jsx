@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import '../style/header.css'
 
 export const Header = () => {
@@ -6,18 +7,18 @@ export const Header = () => {
       <div className="theHeader">
 
         <div className="navItems">
-          <a href="">Home</a>
-          <a href="">Shop</a>
-          <a href="">Products</a>
-          <a href="">Blogs</a>
-          <a href="">Contacts</a>
+          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/shop'>Shop</NavLink>
+          <NavLink to='/aboutUs'>About Us</NavLink>
+          <NavLink to='/blogs'>Blogs</NavLink>
+          <NavLink to='/contact'>Contacts</NavLink>
         </div>
 
         <div className="navLogo">
-          <a href="">
+          <NavLink to='/'>
             <h1>Velocity</h1>
             <p>Glasses</p>
-          </a>
+          </NavLink>
         </div>
 
         <div className="navButtons">
@@ -25,7 +26,7 @@ export const Header = () => {
             <button type='submit'><i className="bi bi-search"></i></button>
             <input type="text" />
           </div>
-          <p className='login'><a href="">login / Register</a></p>
+          <p className='login'><NavLink  to='/registration'>Login or Register <i className="bi bi-person-add"></i></NavLink></p>
         </div>
 
       </div>

@@ -121,7 +121,7 @@
 .marquee-image{
     /* max-width: 1200px; */
     /* margin: auto auto; */
-    height: 200px;
+    /* height: 200px; */
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -203,7 +203,7 @@
     max-width: 1440px;
     display: grid;
     grid-template-columns: 50% 50%;
-    margin: 25px 45px 70px 45px;
+    /* margin: 25px 45px 70px 45px; */
     overflow: hidden;
     background-color: #F7E8CD;
     border-radius: 70px 0 70px 0;

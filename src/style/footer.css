@@ -28,8 +28,11 @@ footer{
 .footer-contents a:hover{
     color:#44332B;
 }
+.footer-contents .social-media .media-icons{
+    display: flex;
+}
 .footer-contents .social-media a{
-    font-size: 18px;
+    font-size: 24px;
 }
 .footer-buttom-content .copyright{
     padding: 15px 0;
