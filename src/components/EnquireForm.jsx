@@ -49,7 +49,7 @@ export const EnquireForm = () => {
       <div className="enquire-img">
         <img src={sideImg} alt="" />
       </div>
-      <form onSubmit={handeSubmit} className="enquire-form">
+      <form onSubmit={handeSubmit} className="theForm">
         <div className="title">Enquire Form</div>
         <div className="input-box">
           <input type="text" name='name' required/>
@@ -68,7 +68,7 @@ export const EnquireForm = () => {
           {/* <label htmlFor="message">Message</label> */}
         </div>
 
-        <button className="enquire-btn">Submit</button>
+        <button className="form-btn">Submit</button>
         {isValid !== null && (
           <p className='validate-message' style={{ color: isValid ? 'green' : 'red' }}>
             {isValid ? 'Your enquiry has been sent!' : 'Please enter a valid email.'}

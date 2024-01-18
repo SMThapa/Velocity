@@ -29,7 +29,11 @@ footer{
     color:#44332B;
 }
 .footer-contents .social-media .media-icons{
+    height: 100%;
+    margin-top: 12px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .footer-contents .social-media a{
     font-size: 24px;

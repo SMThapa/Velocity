@@ -18,6 +18,7 @@
 .title{
   font-size: 30px;
   font-weight: 700;
+  
 }
 
 .p-content{
@@ -52,7 +53,7 @@ a{
   position: relative;
   overflow: hidden;
 }
-
+/* card-pop-up-icons */
 .pop-ups-icons{
   position: absolute;
   display: flex;
@@ -98,7 +99,6 @@ a{
 .pop-ups-icons .bi:hover .showOnHover{
   opacity: 1;
 }
-
 .card .image:hover .pop-ups-icons{
   bottom: 30px;
 }
@@ -129,10 +129,23 @@ a{
   justify-content: space-between;
 }
 .uspCard{
-  max-width: 300px;
+  max-width: 200px;
   padding: 0 10px;
 }
 .uspCard img{
+  width: 100%;
+}
+
+/* blog-card */
+.blogCards{
+  display: flex;
+  justify-content: space-between;
+}
+.blogCard{
+  max-width: 400px;
+  padding: 0 10px;
+}
+.blogCard img{
   width: 100%;
 }
 
@@ -207,15 +220,15 @@ a{
   height: 100%;
   object-fit: cover;
 }
-.enquire-form{
+.theForm{
   overflow: hidden;
   padding: 40px 25px;  
 }
 
-.enquire-form .input-box {
+.theForm .input-box {
   position: relative;
 }
-.enquire-form .input-box input,textarea {
+.theForm .input-box input,textarea {
   width: 80%;
   padding: 10px 18px;
   font-size: 18px;
@@ -226,7 +239,7 @@ a{
   outline: none;
   background: transparent;
 }
-.enquire-form .input-box label {
+.theForm .input-box label {
   position: absolute;
   top:10px;
   padding: 0 5px;
@@ -236,23 +249,23 @@ a{
   pointer-events: none;
   transition: .5s;
 }
-.enquire-form .input-box input:focus ~ label,
-.enquire-form .input-box input:valid ~ label{
+.theForm .input-box input:focus ~ label,
+.theForm .input-box input:valid ~ label{
   top: -8px;
   left: 16px;
   color: black;
   font-size: 12px;
-  background-color: #F6EBD5;
+  background-color: inherit;
 }
-.enquire-form .input-box input:focus,
-.enquire-form .input-box input:valid{
+.theForm .input-box input:focus,
+.theForm .input-box input:valid{
   border-color: black;
 }
-.enquire-form .input-box textarea:focus,
-.enquire-form .input-box textarea:valid{
+.theForm .input-box textarea:focus,
+.theForm .input-box textarea:valid{
   border-color: black;
 }
-.enquire-btn{
+.form-btn{
   text-decoration: none;
   background-color: black;
   font-size: 12px;
@@ -263,11 +276,48 @@ a{
   transition: all .4s ease;
   margin-top: 25px;
 }
-.enquire-btn:hover{
+.form-btn:hover{
   background-color: #A9A9A9;
   color: black;
 }
+
 .validate-message{
   float: right;
   margin-top: 25px;
+}
+
+
+/* registration-form */
+.registration{
+  max-width: 500px;
+  width: 100%;
+  margin: 40px auto;
+}
+.registration .title{
+  margin-bottom: 35px;
+  text-align: center;
+}
+.registration .input-box input{
+  width: 100%;
+}
+.otherStuff{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.registration .others{
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.registration .others:last-child a{
+  color: blue;
+}
+.registration .others:last-child a:hover{
+  text-decoration: underline;
+}
+.registration .others input{
+  padding: 25px;
+  vertical-align: middle;
+  width: 20px;
 }

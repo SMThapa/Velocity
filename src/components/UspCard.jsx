@@ -1,9 +1,7 @@
-import glass from '../assets/images/img5.jpg';
-
-export const UspCard = () => {
+export const UspCard = (Data) => {
   return (
     <div className="uspCard card">
-      <img src={glass} alt="glass1" />
+      <img src={Data.img} alt="glass1" />
     </div>
   )
 }

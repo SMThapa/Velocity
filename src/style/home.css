@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 50% 50%;
     height: auto;
-    margin-bottom: 110px;
+    margin-bottom: 40px;
 }
 .heroBanner .banner{
     width: 100%;
@@ -44,6 +44,16 @@
     scale: 1.1;
 }
 
+/* home-login-register */
+.home-login-register{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 40px 0 50px 0;
+    margin-bottom: 40px;
+}
+
+
 /* about-us-style */
 .aboutUs{
     display: grid;
@@ -73,7 +83,7 @@
 
 /* our-usp */
 .OurUSP{
-    max-width: 1400px;
+    max-width: 1200px;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -159,9 +169,12 @@
 .partner-with-us{
     display: flex;
     align-items: center;
-    gap: 70px;
+gap: 70px;
     padding: 40px 0 50px 0;
 }
+/* .partner-title{
+    text-align: center;
+} */
 
 
 /* latest-product */

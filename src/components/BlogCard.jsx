@@ -2,7 +2,7 @@ import blogImg from '../assets/images/img3.jpg';
 
 export const BlogCard = () => {
   return (
-    <div className="card">
+    <div className="blogCard card">
       <a href="">
         <img src={blogImg} alt="glass1" />
       </a>

@@ -1,28 +1,18 @@
-
-import { NavLink } from "react-router-dom"
-
-export const Registration = () => {
+import { NavLink } from "react-router-dom";
+export const Login = () => {
   return (
     <div className="registration">
       <div className="logo"></div>
       <div className="form-content">
       <form className="theForm">
-        <div className="title">Registration From</div>
+        <div className="title">Login From</div>
         <div className="input-box">
-          <input type="text" name='name' required/>
-          <label>Name</label>
-        </div>
-        <div className="input-box">
-          <input type="text" id="email" name='email' required/>
+          <input type="text" id="email" name='email' autoComplete="false" required/>
           <label>Email</label>
         </div>
         <div className="input-box">
           <input type="password" name='number' required/>
           <label>Password</label>
-        </div>
-        <div className="input-box">
-          <input type="password" name='number' required/>
-          <label>Re-Enter Password</label>
         </div>
 
         <div className="otherStuff">
@@ -31,11 +21,11 @@ export const Registration = () => {
             <label htmlFor="remember-me">Remember me.</label>
           </div>
           <div className="others">
-            <NavLink to='/login'>Already have an account? Lets go!!</NavLink>
+            <NavLink to='/login'>Forgot password?</NavLink>
           </div>
         </div>
 
-        <button className="form-btn">Register</button>
+        <button className="form-btn">Login</button>
         {/* {isValid !== null && (
           <p className='validate-message' style={{ color: isValid ? 'green' : 'red' }}>
             {isValid ? 'Your enquiry has been sent!' : 'Please enter a valid email.'}

@@ -29,7 +29,7 @@ export const Footer = () => {
           <p><a href="">Wholesale</a></p>
         </div>
         <div className="social-media">
-          <h1>Social Media  </h1>
+          {/* <h1>Social Media  </h1> */}
           <div className="media-icons">
             <p><a href=""><i className="bi bi-twitter-x"></i></a></p>
             <p><a href=""><i className="bi bi-facebook"></i></a></p>
