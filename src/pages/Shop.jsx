@@ -1,4 +1,7 @@
-import "../style/Shop.css";
+// title
+import {useTitle} from '../hooks/useTitle';
+
+import "../style/Shop.scss";
 import img from "../assets/shop/category-12.jpg";
 import img2 from "../assets/shop/category-9.jpg";
 import img3 from "../assets/shop/category-13.jpg";
@@ -33,6 +36,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export const Shop = () => {
+
+  useTitle('Shop | Velocity Opticals')
+
   return (
     <div>
       <div className="breadcrumb_body">

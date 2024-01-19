@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom'
-import '../style/header.css'
+
+import logo from '../assets/logo/velocity-logo1.png';
+import '../style/header.scss'
 
 export const Header = () => {
   return (
@@ -16,8 +18,7 @@ export const Header = () => {
 
         <div className="navLogo">
           <NavLink to='/'>
-            <h1>Velocity</h1>
-            <p>Glasses</p>
+            <img src={logo} alt="" />
           </NavLink>
         </div>
 

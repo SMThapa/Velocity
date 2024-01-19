@@ -15,7 +15,7 @@ export const AboutUs = (Data) => {
               PageMaker including versions of Lore
               m Ipsum.</p>
 
-              <a href="">Know more</a>
+              <a href="" className="primary-btn">Know more</a>
           </div>
         </div>
       </div>

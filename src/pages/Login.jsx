@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
+
+// title
+import {useTitle} from '../hooks/useTitle';
+
 export const Login = () => {
+  useTitle('Login | Velocity Opticals')
   return (
     <div className="registration">
       <div className="logo"></div>

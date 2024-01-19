@@ -68,7 +68,7 @@ export const EnquireForm = () => {
           {/* <label htmlFor="message">Message</label> */}
         </div>
 
-        <button className="form-btn">Submit</button>
+        <button className="primary-btn">Submit</button>
         {isValid !== null && (
           <p className='validate-message' style={{ color: isValid ? 'green' : 'red' }}>
             {isValid ? 'Your enquiry has been sent!' : 'Please enter a valid email.'}

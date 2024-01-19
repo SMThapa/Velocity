@@ -1,7 +1,6 @@
 import { Header, Footer } from './components';
-// import {Home } from './pages/index';
 import {AllRoutes} from './routes/AllRoutes';
-import './App.css';
+import './style/Primary.scss';
 
 function App() {
 
@@ -9,7 +8,6 @@ function App() {
     <>
       <Header/>
       <AllRoutes/>
-      {/* <Home/> */}
       <Footer/>
     </>
   )
