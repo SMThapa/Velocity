@@ -30,13 +30,17 @@ export const Footer = () => {
           <p><a href="">Wholesale</a></p>
         </div>
         <div className="social-media">
-          {/* <h1>Social Media  </h1> */}
+          <h1>Contact Details </h1>
           <div className="media-icons">
-            <p><a href=""><i className="bi bi-twitter-x"></i></a></p>
-            <p><a href=""><i className="bi bi-facebook"></i></a></p>
-            <p><a href=""><i className="bi bi-instagram"></i></a></p>
-            <p><a href=""><i className="bi bi-linkedin"></i></a></p>
+            <a href=""><i className="bi bi-twitter-x"></i></a>
+            <a href=""><i className="bi bi-facebook"></i></a>
+            <a href=""><i className="bi bi-instagram"></i></a>
+            <a href=""><i className="bi bi-linkedin"></i></a>
           </div>
+          
+          <p><i className="bi bi-envelope"> &nbsp;</i> support@velocityopticals.com</p>
+          <p><i className="bi bi-telephone"> &nbsp;</i>01140393102</p>
+          <p>Velocity Optics Pvt. Ltd. B-38, First Floor, Okhla Phase-1, New Delhi - 110020, India</p>
         </div>
       </div>
       <div className="footer-buttom-content">

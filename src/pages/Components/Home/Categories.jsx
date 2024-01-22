@@ -1,35 +1,47 @@
+import { useState } from "react";
 export const Categories = (Data) => {
+
+  const [image, setImage] = useState(1);
+  console.log(typeof(image));
+
+  const handleMouseEnter = (e) =>{
+    e.target.classList.add('active')
+    setImage(Number(e.target.id))
+  }
+  const handleMouseLeave = (e) =>{
+    e.target.classList.remove('active')
+  }
   return (
     <div className="categories">
         <div className="centerContainer">
           <div className="cate-options">
             <p className="title">Shop <br />by Categories</p>
             <div className="cate-options">
-              <div className="option">
+              <div className='option' id='0'  onMouseEnter={(event)=>handleMouseEnter(event)} onMouseLeave={(event)=>handleMouseLeave(event)}>
                 <p>All Glasses</p>
-                <span className="hoizontal-line"></span>
               </div>
-              <div className="option">
+
+              <div className="option" id='1' onMouseEnter={(event)=>handleMouseEnter(event)} onMouseLeave={(event)=>handleMouseLeave(event)}>
                 <p>Women&apos;s Glasses</p>
-                <span className="hoizontal-line"></span>
               </div>
-              <div className="option">
+
+              <div className="option" id='2' onMouseEnter={(event)=>handleMouseEnter(event)} onMouseLeave={(event)=>handleMouseLeave(event)}>
                 <p>Men&apos;s  Glasses</p>
-                <span className="hoizontal-line"></span>
               </div>
-              <div className="option">
+
+              <div className="option" id='3' onMouseEnter={(event)=>handleMouseEnter(event)} onMouseLeave={(event)=>handleMouseLeave(event)}>
                 <p>Eco-friendly</p>
-                <span className="hoizontal-line"></span>
               </div>
-              <div className="option">
+
+              <div className="option" id='4' onMouseEnter={(event)=>handleMouseEnter(event)} onMouseLeave={(event)=>handleMouseLeave(event)}>
                 <p>Street Style</p>
-                {/* <span className="hoizontal-line"></span> */}
               </div>
+
             </div>
           </div>
           <div className="cate-images">
             <div className="image">
-              <img src={Data.ImgArr[0]} alt="hover-images" />
+              <img src={Data.ImgArr[image]} alt="hover-images" />
             </div>
           </div>
         </div>

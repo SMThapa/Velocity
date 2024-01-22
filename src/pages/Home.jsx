@@ -1,13 +1,20 @@
-import { HeroBanner, AboutUs, Scheme, Categories, Testimonial, PartnerScheme} from "./Components/Home/index";
-import { ProductCarousel, Card, UspCard, EnquireForm, BlogCard } from "../components/index";
+import { HeroBanner, AboutUs, Scheme, Categories, Testimonial, PartnerScheme, EnquireForm} from "./Components/Home/index";
+import { ProductCarousel, Card, UspCard, BlogCard } from "../components/index";
 
 // title
 import {useTitle} from '../hooks/useTitle';
 
 import aboutUsImg from '../assets/images/img1.jpg'
 import schemeImg from '../assets/images/scheme-img.jpg';
-import womenCate from '../assets/images/img4.jpg';
-import menCate from '../assets/images/img7.jpg';
+
+//category images
+import allCate from '../assets/images/img10.jpg'
+import womenCate from '../assets/images/img1.jpg';
+import menCate from '../assets/images/img4.jpg';
+import ecoCate from '../assets/images/img5.jpg';
+import streetCate from '../assets/images/img7.jpg';
+
+
 import testimonialImg from '../assets/images/img8.jpg';
 
 
@@ -78,7 +85,7 @@ export const Home = () => {
 
       <Scheme Img={schemeImg}/>
 
-      <Categories ImgArr={[womenCate, menCate]}/>
+      <Categories ImgArr={[allCate, womenCate, menCate, ecoCate, streetCate]}/>
 
       <Testimonial Img={testimonialImg}/>
 

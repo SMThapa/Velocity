@@ -1,3 +1,4 @@
+
 export const Scheme = (Data) => {
   return (
     <div className="scheme">
@@ -14,8 +15,16 @@ export const Scheme = (Data) => {
     </div>
     <div className="image-map">
       <img src={Data.Img} alt="image-maping" useMap="#imageMap" />
-      <div className="product1-circle"></div>
-      <div className="product2-circle"></div>
+      <div className="product1-circle">
+        <i className="bi bi-plus-lg"></i>
+
+        <div className="showCard">
+
+        </div>
+      </div>
+      <div className="product2-circle">
+        <i className="bi bi-plus-lg"></i>
+      </div>
     </div>
   </div>
   )

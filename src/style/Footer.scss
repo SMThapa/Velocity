@@ -32,15 +32,20 @@ footer {
 	}
 	.social-media {
 		.media-icons {
-			height: 100%;
-			margin-top: 12px;
+			width: 70%;
+			margin: 12px 29px;
 			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
+			flex-direction: row;
+			justify-content: space-between;
+			a {
+				font-size: 24px;
+			}
 		}
-		a {
-			font-size: 24px;
+		p{
+			font-size: 15px;
+			padding: 5px 0;
 		}
+
 	}
 }
 .footer-buttom-content {

@@ -248,51 +248,66 @@ $background-color_3: #F7E8CD;
 			position: absolute;
 			width: 2rem;
 			height: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			border: 2px solid $color_2;
-			// background-color: black;
+			background-color: $color_2;
 			border-radius: 50%;
+			cursor: pointer;
+			opacity: .8;
 			animation: ripple 0.7s linear infinite;
 		}
-
+		.bi{
+			font-size: 1.2rem;
+			color: black;
+			transition: all .2s ease;
+		}
 		.product1-circle{
 			@include divSize;
 			top: 35%;
     		left: 28%;
+			&:hover .bi{
+				transform: rotate(45deg);
+			}
 		}
 		.product2-circle{
 			@include divSize;
-			top: 33%;
-			right: 33%;
+			top: 34%;
+			right: 32%;
+			&:hover .bi{
+				transform: rotate(45deg);
+			}
 		}
 		@keyframes ripple {
 			0% {
 				box-shadow: 0 0 0 0 rgba($color_2, 0.3),
-				0 0 0 1em rgba($color_2, 0.3),
-				0 0 0 3em rgba($color_2, 0.3),
-				0 0 0 5em rgba($color_2, 0.3);
+				0 0 0 5px rgba($color_2, 0.3),
+				0 0 0 15px rgba($color_2, 0.3),
 			}
 			100% {
 				box-shadow: 0 0 0 1em rgba($color_2, 0.3),
-				0 0 0 3em rgba($color_2, 0.3),
-				0 0 0 5em rgba($color_2, 0.3),
-				0 0 0 8em rgba($color_2, 0);
+				0 0 0 5px rgba($color_2, 0.3),
+				0 0 0 15px rgba($color_2, 0),
 			}
 			}
 	}
+
+	.scheme-text {
+		margin: auto auto;
+		.title {
+			margin-bottom: 25px;
+		}
+		p {
+			text-align: center;
+		}
+		.latestProductButton {
+			margin-top: 25px;
+			text-align: center;
+		}
+	}
 }
-.scheme-text {
-	margin: auto auto;
-	.title {
-		margin-bottom: 25px;
-	}
-	p {
-		text-align: center;
-	}
-	.latestProductButton {
-		margin-top: 25px;
-		text-align: center;
-	}
-}
+
 .categories {
 	padding: 60px 25px;
 	margin-bottom: 50px;
@@ -305,6 +320,8 @@ $background-color_3: #F7E8CD;
 		flex-direction: column;
 		justify-content: space-between;
 		.option {
+			border-bottom: 2px solid rgba(0,0,0, .2);
+    		width: 100%;
 			cursor: pointer;
 			&:hover {
 				p {
@@ -318,31 +335,36 @@ $background-color_3: #F7E8CD;
 				}
 			}
 			p {
+				pointer-events: none;
 				font-size: 40px;
 				font-weight: 300;
 				margin: 12px 0;
 			}
-			.hoizontal-line {
-				display: block;
-				border-bottom: 2px solid black;
-				width: 100%;
-				opacity: .2;
+			&.active{
+				border-bottom: 2px solid rgba(0,0,0);
 			}
 		}
+
 		.title {
 			margin-bottom: 80px;
 		}
 	}
 	.cate-images {
 		display: grid;
+		transition: all 3s ease;
 		.image {
 			max-height: 500px;
 			height: 100%;
+			max-width: 330px;
+			width: 100%;
 			overflow: hidden;
 			margin: auto auto;
 		}
 		img {
 			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			transform: scale(1);
 		}
 	}
 }
