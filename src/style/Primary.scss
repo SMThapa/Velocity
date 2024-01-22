@@ -339,12 +339,14 @@ a {
 			padding: 8px 18px;
 			background-color: inherit;
 			border-bottom: 1px solid #8F9992;	
+			margin-bottom: 30px;
 		}
 	}
 
 	.input-box-divide{
 		display: grid;
-		grid-template-columns: 50% 50%;
+		grid-template-columns: 49% 49%;
+		gap: 2%;
 	}
 }
 
@@ -353,9 +355,9 @@ a {
 	margin-top: 25px;
 }
 .registration {
-	max-width: 500px;
+	max-width: 700px;
 	width: 100%;
-	margin: 40px auto;
+	margin: 10px auto;
 	.title {
 		margin-bottom: 35px;
 		text-align: center;

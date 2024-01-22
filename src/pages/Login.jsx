@@ -15,14 +15,16 @@ export const Login = () => {
     e.preventDefault();
     console.log(userEmail, userPassword);
 
+      axios.post('https://faradic.codtrees-dev.cloud/api/login', {email:userEmail, password:userPassword}).then((res)=>{
+        console.log(res);
+      }).catch((error)=> {
+        console.log(error.response.data.errors.email)
+    });
 
-    axios.post('https://faradic.codtrees-dev.cloud/api/login', {email:userEmail, password:userPassword}).then((res)=>{
-      console.log(res.data);
-    })
+
 
     setUserEmail('');
     setPassword('');
-
   }
 
   return (
