@@ -40,12 +40,7 @@ export const Registration = () => {
           </div>
         </div>
 
-        <button className="form-btn">Register</button>
-        {/* {isValid !== null && (
-          <p className='validate-message' style={{ color: isValid ? 'green' : 'red' }}>
-            {isValid ? 'Your enquiry has been sent!' : 'Please enter a valid email.'}
-          </p>
-        )} */}
+        <button className="primary-btn" type='submit'>Register</button>
       </form>
       </div>
     </div>
