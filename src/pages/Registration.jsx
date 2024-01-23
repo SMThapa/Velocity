@@ -80,12 +80,7 @@ export const Registration = () => {
         <div className="input-box">
           <input type="text" name='name' onChange={e=>setName(e.target.value)} value={name} required/>
           <label>Name</label>
-        </div>        
-        
-        <div className="input-box">
-          <input type="text" name='companyName' onChange={e=>setCompanyName(e.target.value)} value={companyName} required/>
-          <label>Company Name</label>
-        </div>        
+        </div>      
 
         <div className="input-box-divide">
           <div className="input-box">
@@ -97,7 +92,12 @@ export const Registration = () => {
             <input type="email" name='email' onChange={e=>setEmail(e.target.value)} value={email} required/>
             <label>Email</label>  
           </div>   
-        </div>     
+        </div>    
+        
+        <div className="input-box">
+          <input type="text" name='companyName' onChange={e=>setCompanyName(e.target.value)} value={companyName} required/>
+          <label>Company Name</label>
+        </div>           
 
         <div className="input-box">
           <input type="text" name='companyType' onChange={e=>setcompanyType(e.target.value)} value={companyType} required/>
