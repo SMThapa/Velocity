@@ -43,11 +43,30 @@ export const Registration = () => {
       aadhar:aadhar, 
       POC_name:pocName, 
       POC_number:pocNumber, 
-      Applying_for:dealer, credit_limit:creditLimit, password:password}).then((res)=>{
+      Applying_for:dealer, 
+      credit_limit:creditLimit, 
+      password:password
+    }).then((res)=>{
         console.log(res.data.message);
+        setName('');
+        setCompanyName('');
+        setcompanyType('');
+        setAddress('');
+        setPhone('');
+        setEmail('');
+        setPancard('');
+        setGst('');
+        setTan('');
+        setAadhar('');
+        setPocName('');
+        setPocNumber('');
+        setDealer('');
+        setCreditLimit('');
+        setPassword('');
       }).catch((error)=>{
         console.log(error.response.data.errors);
       })
+
   }
 
 
