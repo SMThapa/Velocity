@@ -25,6 +25,7 @@ import usp3 from '../assets/USP/usp3.png';
 
 
 import '../style/Home.scss';
+import { Link } from "react-router-dom";
 
 
 export const Home = () => {
@@ -39,7 +40,7 @@ export const Home = () => {
       <div className="centerContainer">
         <div className="home-login-register">
           <p className="p-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,</p>
-          <a href="" className="primary-btn">Login or Register</a>
+          <Link to="/registration" className="primary-btn">Login or Register</Link>
         </div>    
       </div>   
 
@@ -49,7 +50,7 @@ export const Home = () => {
         <div className="title partner-title">Partner With Us</div>
         <div className="partner-with-us">
           <p className="p-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,</p>
-          <a href="" className="primary-btn">Let&apos;s Go!</a>
+          <a to="" className="primary-btn">Let&apos;s Go!</a>
         </div>    
       </div>      
 

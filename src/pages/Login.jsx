@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 // title
@@ -7,6 +7,8 @@ import { useState } from "react";
 
 export const Login = () => {
   useTitle('Login | Velocity Opticals')
+
+  const navigate = useNavigate();
 
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setPassword] = useState('');
@@ -17,15 +19,20 @@ export const Login = () => {
 
       axios.post('https://faradic.codtrees-dev.cloud/api/login', {email:userEmail, password:userPassword}).then((res)=>{
         console.log(res);
+        sessionStorage.clear()//clears the sesstion storage
+        //adds creds
+        sessionStorage.setItem('email',userEmail);
+        sessionStorage.setItem('password', userPassword);
+        //removes input from the input field
+        setUserEmail('');
+        setPassword('');
+        //redirects to home
+        navigate('/')
       }).catch((error)=> {
         console.log(error.response.data.errors.email)
     });
-
-
-
-    setUserEmail('');
-    setPassword('');
   }
+
 
   return (
     <div className="registration">

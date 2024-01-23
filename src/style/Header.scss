@@ -38,6 +38,16 @@ nav {
 				color: $color_1;
 				border-bottom: medium solid $color_2;
 			}
+			@media screen and (max-width:1200px){
+				display: none;
+			}
+		}
+
+		.hamburgerMenu{
+
+			@media screen and (min-width:1199px) {
+				display: none;
+			}
 		}
 
 		.navLogo {
@@ -50,6 +60,10 @@ nav {
 				height: 100%;
 				width: 100%;
 				filter: brightness(.15);
+			}
+
+			@media screen and (max-width:1200px){
+				justify-self: left;
 			}
 		}
 
@@ -94,6 +108,19 @@ nav {
 					background-color: $background-color_4;
 					padding: 10px 16px;
 					border-radius: 25px;
+				}
+			}
+
+			.navUtilButtons{
+				margin: 0 15px;
+				.bi{
+					font-size: 24px;
+					margin: 0 5px;
+					cursor: pointer;
+				}
+
+				@media screen and (max-width:1200px){
+					display: none;
 				}
 			}
 		}
