@@ -47,9 +47,9 @@ export const Header = () => {
           <p className={`${isUser ? 'hidden' : ''} login`}><NavLink  to='/registration'>Login or Register <i className="bi bi-person-add"></i></NavLink></p>
           
           <div className={`navUtilButtons ${isUser ? '' : 'hidden'}`}>
-            <Link to=""><i className="bi bi-person"></i></Link>
-            <Link to=""><i className="bi bi-heart"></i></Link>
-            <Link to=""><i className="bi bi-bag"></i></Link>
+            <Link to="/userProfile"><i className="bi bi-person"></i></Link>
+            <Link to="/wishlist"><i className="bi bi-heart"></i></Link>
+            <Link to="/cart"><i className="bi bi-bag"></i></Link>
             <i onClick={handleLogout} className="bi bi-box-arrow-right"></i>
           </div>
 
