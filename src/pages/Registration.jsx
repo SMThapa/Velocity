@@ -27,11 +27,13 @@ export const Registration = () => {
   const [creditLimit, setCreditLimit] = useState('');
   const [password, setPassword] = useState('');
 
+  //error message state
+  const [inputErrorList, setInputErrorList] = useState({})  
 
   const handleSubmit = (e)=>{
     e.preventDefault();
-    
-    axios.post('https://faradic.codtrees-dev.cloud/api/registervelocity', {
+
+    const data = {
       name:name, 
       company_name:companyName, 
       phone_number:phone, 
@@ -47,7 +49,9 @@ export const Registration = () => {
       Applying_for:dealer, 
       credit_limit:creditLimit, 
       password:password
-    }).then((res)=>{
+    }
+    
+    axios.post('https://faradic.codtrees-dev.cloud/api/registervelocity', data ).then((res)=>{
         console.log(res.data.message);
         setName('');
         setCompanyName('');
@@ -67,7 +71,15 @@ export const Registration = () => {
 
         toast.success('Registration SuccessFul')
       }).catch((error)=>{
-        toast.error("Registration Unsuccessfull")
+        if(error.response){
+          if (error.response.status === 422) {
+            setInputErrorList(error.response.data.errors);
+          }
+          if (error.response.status === 500) {
+            alert(error.response.data);
+          }
+        }
+        toast.error("Registration Unsuccessfull",{duration: 5000})
         console.log(error.response.data.errors);
       })
 
@@ -83,69 +95,69 @@ export const Registration = () => {
 
         <div className="input-box">
           <input type="text" name='name' onChange={e=>setName(e.target.value)} value={name} required/>
-          <label>Name</label>
+          <label>Name <span className='text-danger'>{inputErrorList.name}</span></label>
         </div>      
 
         <div className="input-box-divide">
           <div className="input-box">
             <input type="text" name='number' onChange={e=>setPhone(e.target.value)} value={phone} required/>
-            <label>Number</label>
+            <label>Number <span className='text-danger'>{inputErrorList.phone_number}</span></label>
           </div>        
 
           <div className="input-box">
             <input type="email" name='email' onChange={e=>setEmail(e.target.value)} value={email} required/>
-            <label>Email</label>  
+            <label>Email <span className='text-danger'>{inputErrorList.email}</span></label>  
           </div>   
         </div>    
         
         <div className="input-box">
           <input type="text" name='companyName' onChange={e=>setCompanyName(e.target.value)} value={companyName} required/>
-          <label>Company Name</label>
+          <label>Company Name <span className='text-danger'>{inputErrorList.company_name}</span></label>
         </div>           
 
         <div className="input-box">
           <input type="text" name='companyType' onChange={e=>setcompanyType(e.target.value)} value={companyType} required/>
-          <label>Company Type</label>
+          <label>Company Type <span className='text-danger'>{inputErrorList.company_type}</span></label>
         </div>        
 
         <div className="input-box">
           <input type="text" name='address' onChange={e=>setAddress(e.target.value)} value={address} required/>
-          <label>Address</label>
+          <label>Address <span className='text-danger'>{inputErrorList.address}</span></label>
         </div>        
 
         <div className="input-box-divide">
           <div className="input-box">
             <input type="text" name='Pan Card' onChange={e=>setPancard(e.target.value)} value={pancard} required/>
-            <label>Pancard</label>
+            <label>Pancard <span className='text-danger'>{inputErrorList.pan_card_id}</span></label>
           </div>        
 
           <div className="input-box">
             <input type="text" name='gst' onChange={e=>setGst(e.target.value)} value={gst} required/>
-            <label>GST</label>
+            <label>GST <span className='text-danger'>{inputErrorList.GST_no}</span></label>
           </div>  
         </div>      
 
         <div className="input-box-divide">
           <div className="input-box">
             <input type="text" name='tan' onChange={e=>setTan(e.target.value)} value={tan} required/>
-            <label>Tan</label>
+            <label>Tan <span className='text-danger'>{inputErrorList.tan}</span></label>
           </div>        
 
           <div className="input-box">
             <input type="text" name='aadhar' onChange={e=>setAadhar(e.target.value)} value={aadhar} required/>
-            <label>AAdhar</label>
+            <label>AAdhar <span className='text-danger'>{inputErrorList.aadhar}</span></label>
           </div>        
         </div>
 
         <div className="input-box-divide">
           <div className="input-box">
             <input type="text" name='pocNumber' onChange={e=>setPocName(e.target.value)} value={pocName} required/>
-            <label>POC Name</label>
+            <label>POC Name <span className='text-danger'>{inputErrorList.POC_name}</span></label>
           </div>        
 
           <div className="input-box">
             <input type="text" name='pocNumber' onChange={e=>setPocNumber(e.target.value)} value={pocNumber} required/>
-            <label>POC Number</label>
+            <label>POC Number <span className='text-danger'>{inputErrorList.POC_number}</span></label>
           </div>        
         </div>
 
@@ -157,16 +169,17 @@ export const Registration = () => {
               <option value="Direct Dealer">Direct Dealer</option>
               <option value="Distributer">Distributer</option>
             </select>
+            <span className='text-danger'>{inputErrorList.Applying_for}</span>
           </div>     
 
           <div className="input-box">
             <input type="text" name='creditLimit' onChange={e=>setCreditLimit(e.target.value)} value={creditLimit} required/>
-            <label>Credit Limit</label>
+            <label>Credit Limit <span className='text-danger'>{inputErrorList.credit_limit}</span></label>
           </div>   
         </div>    
         <div className="input-box">
             <input type="password" name='creditLimit' onChange={e=>setPassword(e.target.value)} value={password} required/>
-            <label>Password</label>
+            <label>Password <span className='text-danger'>{inputErrorList.password}</span></label>
           </div>   
 
         <div className="otherStuff">
