@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import {useTitle} from '../hooks/useTitle';
 
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
@@ -10,6 +10,7 @@ export const Registration = () => {
 
   useTitle('Registration | Velocity Opticals');
 
+  const navigate = useNavigate()
 
   const [name, setName] = useState('');
   const [companyName, setCompanyName] = useState('');
@@ -32,6 +33,8 @@ export const Registration = () => {
 
   const handleSubmit = (e)=>{
     e.preventDefault();
+
+    setInputErrorList({});
 
     const data = {
       name:name, 
@@ -69,7 +72,9 @@ export const Registration = () => {
         setCreditLimit('');
         setPassword('');
 
-        toast.success('Registration SuccessFul')
+        toast.success(res.data.message)
+
+        navigate('/')
       }).catch((error)=>{
         if(error.response){
           if (error.response.status === 422) {
@@ -163,13 +168,13 @@ export const Registration = () => {
 
         <div className="input-box-divide">
           <div className="input-box">
+            <span className='text-danger'>{inputErrorList.Applying_for}</span>
             <select name="" id="" onChange={e=>setDealer(e.target.value)} value={dealer}>
-              <option value="--select role for applying--">--select role for applying--</option>
+              <option value="--select role for applying--">--select role applying for--</option>
               <option value="Dealer">Dealer</option>
               <option value="Direct Dealer">Direct Dealer</option>
               <option value="Distributer">Distributer</option>
             </select>
-            <span className='text-danger'>{inputErrorList.Applying_for}</span>
           </div>     
 
           <div className="input-box">

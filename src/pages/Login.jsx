@@ -23,7 +23,6 @@ export const Login = () => {
     console.log(emailRef.current.value, passwordRef.current.value);
 
     axios.post('https://faradic.codtrees-dev.cloud/api/login', {email:emailRef.current.value, password:passwordRef.current.value}).then((res)=>{
-      console.log(res);
       sessionStorage.clear()
 
       sessionStorage.setItem('email',emailRef.current.value);
@@ -31,7 +30,7 @@ export const Login = () => {
 
       emailRef.current.value = "";
       passwordRef.current.value = "";
-      toast.success("Successfully Logged-in!!",{ duration: 5000});
+      toast.success(res.data.message,{ duration: 5000});
       navigate('/')
     }).catch((error)=> {
       toast.error("Login Unsuccessfull",{ duration: 5000});
