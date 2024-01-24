@@ -17,7 +17,6 @@ export const Shop = () => {
   useEffect(()=>{
     axios.get("https://faradic.codtrees-dev.cloud/api/showProducts")
       .then(res=>{
-        console.log(res.data.Products);
         setProducts(res.data.Products);
       }).catch(error=>{
         console.log(error.message)
