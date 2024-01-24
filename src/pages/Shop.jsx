@@ -5,7 +5,7 @@ import {useTitle} from '../hooks/useTitle';
 
 import "../style/Shop.scss";
 
-import { ProductCard } from '../components/ProductCard';
+import { Card } from '../components/index';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -46,7 +46,7 @@ export const Shop = () => {
             <div className="theRow">
               {
                 allProducts.slice(0,14).map(prod => (
-                  <ProductCard key={prod.id} data={prod}/>
+                  <Card key={prod.id} data={prod}/>
                 ))
               }
 

@@ -1,6 +1,6 @@
 import glass from '../assets/images/glass1.jpg';
 
-export const Card = () => {
+export const Card = (data) => {
   return (
     <div className="card">
       <div className="image">
@@ -23,8 +23,8 @@ export const Card = () => {
         </div>
       </div>        
       <div className="card-text">
-          <p className='product-title'>Product Name</p>
-          <p className="product-price">Rs. 10</p>
+          <p className='product-title'>{data.data.product_name}</p>
+          <p className="product-price">Rs. {data.data.product_price}</p>
       </div>
     </div>
   )

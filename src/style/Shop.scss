@@ -254,6 +254,10 @@ select {
 .theRow{
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
+
+	.card{
+		margin-bottom: 25px;
+	}
 }
 .Brand-section {
 	h4 {

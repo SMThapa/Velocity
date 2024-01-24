@@ -5,3 +5,4 @@ export {Categories} from './Categories';
 export {Testimonial} from './Testimonial';
 export {PartnerScheme} from './PartnerScheme';
 export {EnquireForm} from './EnquireForm';
+export {ProductCarousel} from './ProductCarousel';

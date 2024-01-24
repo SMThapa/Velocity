@@ -1,5 +1,5 @@
 import { HeroBanner, AboutUs, Scheme, Categories, Testimonial, PartnerScheme, EnquireForm} from "./Components/Home/index";
-import { ProductCarousel, Card, UspCard, BlogCard } from "../components/index";
+import { ProductCarousel, UspCard, BlogCard } from "../components/index";
 
 // title
 import {useTitle} from '../hooks/useTitle';
@@ -31,7 +31,7 @@ import { Link } from "react-router-dom";
 export const Home = () => {
 
   useTitle('Home | Velocity Opticals')
-  const latestProductCard = <Card/>;
+
 
   return (
     <>
@@ -69,7 +69,7 @@ export const Home = () => {
       <div className="latestProduct">
         <div className="carouselContainer">
           <p className="title">Our Product</p>
-          <ProductCarousel component={latestProductCard}/>
+          <ProductCarousel/>
           <div className="latestProductButton">
             <a href="" className="primary-btn">Shop Now</a>
           </div>
