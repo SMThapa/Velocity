@@ -2,24 +2,18 @@ import { NavLink, Link } from 'react-router-dom'
 
 import logo from '../assets/logo/velocity-logo1.png';
 import '../style/header.scss'
-import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import { useContext } from 'react';
+import { SignInContext } from '../App';
 
 
 export const Header = () => {
 
-  const [isUser, setUser] = useState(false);
-
-  const [sessionLength, setSesLength] = useState(sessionStorage.legnth === 0 ? false: true);
-  
-  useEffect(()=>{
-    sessionLength ? setUser(true) : setUser(false)
-  }, [sessionLength])
-
+  const [signedIn, setSignedIn] = useContext(SignInContext)
 
   const handleLogout = () =>{
     sessionStorage.clear();
-    setUser(false);
+    setSignedIn(false)
     toast.success('Successsfully Logged-Out');
   }
 
@@ -51,17 +45,14 @@ export const Header = () => {
             <input type="text" />
           </div>
           
-          
-          {
-            isUser ? 
-            <div className={`navUtilButtons`}>
-              <Link to="/userProfile"><i className="bi bi-person"></i></Link>
-              <Link to="/wishlist"><i className="bi bi-heart"></i></Link>
-              <Link to="/cart"><i className="bi bi-bag"></i></Link>
-              <i onClick={handleLogout} className="bi bi-box-arrow-right"></i>
-            </div>
-            : <p className={`login`}><NavLink  to='/registration'>Login or Register <i className="bi bi-person-add"></i></NavLink></p>
-          }
+          <p className={`login ${signedIn ? 'hidden' : ''}`}><NavLink  to='/registration'>Login or Register <i className="bi bi-person-add"></i></NavLink></p>
+
+          <div className={`navUtilButtons ${signedIn ? '': 'hidden'}`}>
+            <Link to="/userProfile"><i className="bi bi-person"></i></Link>
+            <Link to="/wishlist"><i className="bi bi-heart"></i></Link>
+            <Link to="/cart"><i className="bi bi-bag"></i></Link>
+            <i onClick={handleLogout} className="bi bi-box-arrow-right"></i>
+          </div>
           
 
 

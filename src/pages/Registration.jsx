@@ -1,14 +1,17 @@
 // title
-import { useState } from 'react';
+import { useState ,useContext} from 'react';
 import {useTitle} from '../hooks/useTitle';
 
 import { NavLink, useNavigate } from "react-router-dom"
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { SignInContext } from "../App";
 
 export const Registration = () => {
 
   useTitle('Registration | Velocity Opticals');
+
+  const [signedIn, setSignedIn] = useContext(SignInContext)
 
   const navigate = useNavigate()
 
@@ -72,9 +75,14 @@ export const Registration = () => {
         setCreditLimit('');
         setPassword('');
 
+        sessionStorage.clear()
+        sessionStorage.setItem('email',email);
+        sessionStorage.setItem('password', password);
+        setSignedIn(true);
+
         toast.success(res.data.message)
 
-        navigate('/')
+        navigate('/userProfile')
       }).catch((error)=>{
         if(error.response){
           if (error.response.status === 422) {

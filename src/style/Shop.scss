@@ -251,6 +251,10 @@ select {
 		font-size: 21px;
 	}
 }
+.theRow{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
 .Brand-section {
 	h4 {
 		font-weight: bold;

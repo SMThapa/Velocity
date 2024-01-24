@@ -1,13 +1,14 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
-
-// title
 import {useTitle} from '../hooks/useTitle';
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import toast from "react-hot-toast";
+import { SignInContext } from "../App";
 
 export const Login = () => {
   useTitle('Login | Velocity Opticals')
+
+  const [signedIn, setSignedIn] = useContext(SignInContext)
 
   const navigate = useNavigate();
 
@@ -23,6 +24,7 @@ export const Login = () => {
     console.log(emailRef.current.value, passwordRef.current.value);
 
     axios.post('https://faradic.codtrees-dev.cloud/api/login', {email:emailRef.current.value, password:passwordRef.current.value}).then((res)=>{
+      console.log(res);
       sessionStorage.clear()
 
       sessionStorage.setItem('email',emailRef.current.value);
@@ -30,11 +32,14 @@ export const Login = () => {
 
       emailRef.current.value = "";
       passwordRef.current.value = "";
-      toast.success(res.data.message,{ duration: 5000});
+      toast.success("Login Successfull!!",{ duration: 5000});
+
+      // setSignedIn(true)
       navigate('/')
+      setSignedIn(true)
     }).catch((error)=> {
       toast.error("Login Unsuccessfull",{ duration: 5000});
-      console.log(error.response.data.errors.email)
+      console.log(error.message)
     });
   }
 
