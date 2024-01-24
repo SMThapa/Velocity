@@ -4,6 +4,7 @@ import {useTitle} from '../hooks/useTitle';
 
 import { NavLink } from "react-router-dom"
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 export const Registration = () => {
 
@@ -63,7 +64,10 @@ export const Registration = () => {
         setDealer('');
         setCreditLimit('');
         setPassword('');
+
+        toast.success('Registration SuccessFul')
       }).catch((error)=>{
+        toast.error("Registration Unsuccessfull")
         console.log(error.response.data.errors);
       })
 

@@ -2,7 +2,6 @@ import { useState } from "react";
 export const Categories = (Data) => {
 
   const [image, setImage] = useState(1);
-  console.log(typeof(image));
 
   const handleMouseEnter = (e) =>{
     e.target.classList.add('active')

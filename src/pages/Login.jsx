@@ -3,33 +3,39 @@ import axios from "axios";
 
 // title
 import {useTitle} from '../hooks/useTitle';
-import { useState } from "react";
+import { useRef } from "react";
+import toast from "react-hot-toast";
 
 export const Login = () => {
   useTitle('Login | Velocity Opticals')
 
   const navigate = useNavigate();
 
-  const [userEmail, setUserEmail] = useState('');
-  const [userPassword, setPassword] = useState('');
+  // const [userEmail, setUserEmail] = useState('');
+  // const [userPassword, setPassword] = useState('');
+
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
-    console.log(userEmail, userPassword);
 
-      axios.post('https://faradic.codtrees-dev.cloud/api/login', {email:userEmail, password:userPassword}).then((res)=>{
-        console.log(res);
-        sessionStorage.clear()//clears the sesstion storage
-        //adds creds
-        sessionStorage.setItem('email',userEmail);
-        sessionStorage.setItem('password', userPassword);
-        //removes input from the input field
-        setUserEmail('');
-        setPassword('');
-        //redirects to home
-        navigate('/')
-      }).catch((error)=> {
-        console.log(error.response.data.errors.email)
+    console.log(emailRef.current.value, passwordRef.current.value);
+
+    axios.post('https://faradic.codtrees-dev.cloud/api/login', {email:emailRef.current.value, password:passwordRef.current.value}).then((res)=>{
+      console.log(res);
+      sessionStorage.clear()
+
+      sessionStorage.setItem('email',emailRef.current.value);
+      sessionStorage.setItem('password', passwordRef.current.value);
+
+      emailRef.current.value = "";
+      passwordRef.current.value = "";
+      toast.success("Successfully Logged-in!!",{ duration: 5000});
+      navigate('/')
+    }).catch((error)=> {
+      toast.error("Login Unsuccessfull",{ duration: 5000});
+      console.log(error.response.data.errors.email)
     });
   }
 
@@ -41,11 +47,11 @@ export const Login = () => {
       <form className="theForm" onSubmit={handleSubmit}>
         <div className="title">Login From</div>
         <div className="input-box">
-          <input type="text" id="email" name='email' autoComplete="false" onChange={e=>setUserEmail(e.target.value)} value={userEmail} required/>
+          <input type="text" id="email" autoComplete="false" ref={emailRef} required/>
           <label>Email</label>
         </div>
         <div className="input-box">
-          <input type="password" name='number' onChange={e=>setPassword(e.target.value)} value={userPassword} required/>
+          <input type="password" ref={passwordRef} required/>
           <label>Password</label>
         </div>
 

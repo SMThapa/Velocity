@@ -2,17 +2,25 @@ import { NavLink, Link } from 'react-router-dom'
 
 import logo from '../assets/logo/velocity-logo1.png';
 import '../style/header.scss'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
+
 
 export const Header = () => {
 
-  // const isUser = sessionStorage.getItem('email');
-  const [isUser, setUser] = useState(sessionStorage.length === 0 ? false : true);
+  const [isUser, setUser] = useState(false);
+
+  const [sessionLength, setSesLength] = useState(sessionStorage.legnth === 0 ? false: true);
+  
+  useEffect(()=>{
+    sessionLength ? setUser(true) : setUser(false)
+  }, [sessionLength])
 
 
-  const handleLogout = ()=>{
-    sessionStorage.clear(); 
-    setUser(true);
+  const handleLogout = () =>{
+    sessionStorage.clear();
+    setUser(false);
+    toast.success('Successsfully Logged-Out');
   }
 
   return (
@@ -42,16 +50,20 @@ export const Header = () => {
             <button type='submit'><i className="bi bi-search"></i></button>
             <input type="text" />
           </div>
-        
           
-          <p className={`${isUser ? 'hidden' : ''} login`}><NavLink  to='/registration'>Login or Register <i className="bi bi-person-add"></i></NavLink></p>
           
-          <div className={`navUtilButtons ${isUser ? '' : 'hidden'}`}>
-            <Link to="/userProfile"><i className="bi bi-person"></i></Link>
-            <Link to="/wishlist"><i className="bi bi-heart"></i></Link>
-            <Link to="/cart"><i className="bi bi-bag"></i></Link>
-            <i onClick={handleLogout} className="bi bi-box-arrow-right"></i>
-          </div>
+          {
+            isUser ? 
+            <div className={`navUtilButtons`}>
+              <Link to="/userProfile"><i className="bi bi-person"></i></Link>
+              <Link to="/wishlist"><i className="bi bi-heart"></i></Link>
+              <Link to="/cart"><i className="bi bi-bag"></i></Link>
+              <i onClick={handleLogout} className="bi bi-box-arrow-right"></i>
+            </div>
+            : <p className={`login`}><NavLink  to='/registration'>Login or Register <i className="bi bi-person-add"></i></NavLink></p>
+          }
+          
+
 
         </div>
 
