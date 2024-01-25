@@ -1,9 +1,12 @@
 import { Registration } from "./Registration"
 import { useContext } from "react"
 import { SignInContext } from "../App"
+import { useTitle } from "../hooks/useTitle"
 import '../style/PartnerUs.scss'
 
 export const PartnerUs = () => {
+
+    useTitle('Partner With Us | Velocity Opticals')
 
     const [signedIn, setSignedIn] = useContext(SignInContext)
 

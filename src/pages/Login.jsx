@@ -27,8 +27,9 @@ export const Login = () => {
       console.log(res);
       sessionStorage.clear()
 
-      sessionStorage.setItem('email',emailRef.current.value);
-      sessionStorage.setItem('password', passwordRef.current.value);
+      // sessionStorage.setItem('email',emailRef.current.value);
+      // sessionStorage.setItem('password', passwordRef.current.value);
+      sessionStorage.setItem('User',JSON.stringify(res.data.User));
 
       emailRef.current.value = "";
       passwordRef.current.value = "";

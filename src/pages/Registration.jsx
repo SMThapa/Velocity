@@ -75,9 +75,11 @@ export const Registration = () => {
         setPassword('');
 
         sessionStorage.clear()
-        sessionStorage.setItem('email',email);
-        sessionStorage.setItem('name',name);
-        sessionStorage.setItem('password', password);
+        // sessionStorage.setItem('email',email);
+        // sessionStorage.setItem('name',name);
+        // sessionStorage.setItem('password', password);
+
+        sessionStorage.setItem('User',JSON.stringify(res.data.User));
         setSignedIn(true);
 
         toast.success(res.data.message)
@@ -165,12 +167,12 @@ export const Registration = () => {
         <div className="input-box-divide">
           <div className="input-box">
             <input type="text" name='pocNumber' onChange={e=>setPocName(e.target.value)} value={pocName} required/>
-            <label>POC Name <span className='text-danger'>{inputErrorList.POC_name}</span></label>
+            <label>POC(Point of Contact) Name <span className='text-danger'>{inputErrorList.POC_name}</span></label>
           </div>        
 
           <div className="input-box">
             <input type="text" name='pocNumber' onChange={e=>setPocNumber(e.target.value)} value={pocNumber} required/>
-            <label>POC Number <span className='text-danger'>{inputErrorList.POC_number}</span></label>
+            <label>POC(Point of Contact) Number <span className='text-danger'>{inputErrorList.POC_number}</span></label>
           </div>        
         </div>
 
@@ -186,7 +188,7 @@ export const Registration = () => {
           </div>     
 
           <div className="input-box">
-            <input type="text" name='creditLimit' onChange={e=>setCreditLimit(e.target.value)} value={creditLimit} required/>
+            <input type="number" min="0" max="300000" name='creditLimit' onChange={e=>setCreditLimit(e.target.value)} value={creditLimit} required/>
             <label>Credit Limit <span className='text-danger'>{inputErrorList.credit_limit}</span></label>
           </div>   
         </div>    
