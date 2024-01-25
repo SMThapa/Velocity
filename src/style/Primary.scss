@@ -58,6 +58,7 @@ a {
 	padding: 0 15px;
 }
 
+
 //swiper js custom style
 .swiper-button-prev{
 	color: black;
@@ -373,12 +374,10 @@ a {
 	.others {
 		margin-top: 0;
 		margin-bottom: 15px;
-		&:last-child {
-			a {
-				color: $color_5;
-				&:hover {
-					text-decoration: underline;
-				}
+		a {
+			color: $color_5;
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 		input {
@@ -392,5 +391,10 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 15px;
+	// padding: 0 15px;
+
+	.errors{
+		display: flex;
+    	flex-direction: column;
+	}
 }

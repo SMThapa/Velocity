@@ -1,4 +1,4 @@
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useNavigate } from 'react-router-dom'
 
 import logo from '../assets/logo/velocity-logo1.png';
 import '../style/header.scss'
@@ -9,11 +9,14 @@ import { SignInContext } from '../App';
 
 export const Header = () => {
 
+  const navigate = useNavigate();
+
   const [signedIn, setSignedIn] = useContext(SignInContext)
 
   const handleLogout = () =>{
     sessionStorage.clear();
     setSignedIn(false)
+    navigate('/')
     toast.success('Successsfully Logged-Out');
   }
 
@@ -25,6 +28,7 @@ export const Header = () => {
           <NavLink to='/'>Home</NavLink>
           <NavLink to='/shop'>Shop</NavLink>
           <NavLink to='/aboutUs'>About Us</NavLink>
+          <NavLink to='/partnerUs'>Partner Us</NavLink>
           <NavLink to='/blogs'>Blogs</NavLink>
           <NavLink to='/contact'>Contacts</NavLink>
         </div>
@@ -45,7 +49,7 @@ export const Header = () => {
             <input type="text" />
           </div>
           
-          <p className={`login ${signedIn ? 'hidden' : ''}`}><NavLink  to='/registration'>Login or Register <i className="bi bi-person-add"></i></NavLink></p>
+          <p className={`login ${signedIn ? 'hidden' : ''}`}><NavLink  to='/login'>Login<i className="bi bi-person-add"></i></NavLink></p>
 
           <div className={`navUtilButtons ${signedIn ? '': 'hidden'}`}>
             <Link to="/userProfile"><i className="bi bi-person"></i></Link>

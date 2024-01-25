@@ -37,7 +37,7 @@ export const Registration = () => {
   const handleSubmit = (e)=>{
     e.preventDefault();
 
-    setInputErrorList({});
+    // setInputErrorList({});
 
     const data = {
       name:name, 
@@ -58,7 +58,6 @@ export const Registration = () => {
     }
     
     axios.post('https://faradic.codtrees-dev.cloud/api/registervelocity', data ).then((res)=>{
-        console.log(res.data.message);
         setName('');
         setCompanyName('');
         setcompanyType('');
@@ -77,6 +76,7 @@ export const Registration = () => {
 
         sessionStorage.clear()
         sessionStorage.setItem('email',email);
+        sessionStorage.setItem('name',name);
         sessionStorage.setItem('password', password);
         setSignedIn(true);
 
@@ -104,11 +104,11 @@ export const Registration = () => {
       <div className="logo"></div>
       <div className="form-content">
       <form className="theForm" onSubmit={handleSubmit}>
-        <div className="title">Registration From</div>
+        <div className="title">Registration Form</div>
 
         <div className="input-box">
           <input type="text" name='name' onChange={e=>setName(e.target.value)} value={name} required/>
-          <label>Name <span className='text-danger'>{inputErrorList.name}</span></label>
+          <label>Full Name<span className='text-danger'>{inputErrorList.name}</span></label>
         </div>      
 
         <div className="input-box-divide">
@@ -198,6 +198,24 @@ export const Registration = () => {
         <div className="otherStuff">
           <div className="others">
             <NavLink to='/login'>Already have an account? Lets go!!</NavLink>
+          </div>    
+
+          <div className="errors">
+            <span className='text-danger'>{inputErrorList.name}</span>
+            <span className='text-danger'>{inputErrorList.phone_number}</span>
+            <span className='text-danger'>{inputErrorList.email}</span>
+            <span className='text-danger'>{inputErrorList.company_name}</span>
+            <span className='text-danger'>{inputErrorList.company_type}</span>
+            <span className='text-danger'>{inputErrorList.address}</span>
+            <span className='text-danger'>{inputErrorList.pan_card_id}</span>
+            <span className='text-danger'>{inputErrorList.GST_no}</span>
+            <span className='text-danger'>{inputErrorList.tan}</span>
+            <span className='text-danger'>{inputErrorList.aadhar}</span>
+            <span className='text-danger'>{inputErrorList.POC_name}</span>
+            <span className='text-danger'>{inputErrorList.POC_number}</span>
+            <span className='text-danger'>{inputErrorList.Applying_for}</span>
+            <span className='text-danger'>{inputErrorList.credit_limit}</span>
+            <span className='text-danger'>{inputErrorList.password}</span>
           </div>
         </div>
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
 import { ScrollToTop } from './other/ScrollToTop';
 import { BrowserRouter as Router } from 'react-router-dom'
 import "bootstrap-icons/font/bootstrap-icons.css";
