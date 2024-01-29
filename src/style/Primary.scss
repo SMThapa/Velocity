@@ -57,7 +57,9 @@ a {
 	margin: auto auto;
 	padding: 0 15px;
 }
-
+.margin-bottom-100px{
+	margin-bottom: 100px;
+}
 
 //swiper js custom style
 .swiper-button-prev{
@@ -252,7 +254,7 @@ a {
 
 .enquire-box {
 	margin-bottom: 130px;
-	background-color: $background-color_4;
+	background-color: #FFDE2E;
 	display: grid;
 	grid-template-columns: 45% 50%;
 	gap: 3%;
@@ -267,6 +269,33 @@ a {
 			height: 100%;
 			object-fit: cover;
 		}
+	}
+	.input-box{
+		input,select{
+			border-bottom: 1px solid black !important;
+		}
+		label{
+			color: black !important;
+		}
+		textarea::placeholder{
+			color: black !important;
+		}
+
+	}
+}
+.enquire-btn{
+	text-decoration: none;
+	background-color: #17344a;
+	font-size: 12px;
+	color: white;
+	padding: 8px 16px;
+	border: none;
+	cursor: pointer;
+	transition: all .4s ease;
+	text-align: center;
+	width: auto;
+	&:hover {
+		border-radius: 25px;
 	}
 }
 

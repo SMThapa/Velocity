@@ -36,7 +36,7 @@ export const Login = () => {
       toast.success("Login Successfull!!",{ duration: 5000});
 
       // setSignedIn(true)
-      navigate('/')
+      navigate('/userProfile')
       setSignedIn(true)
     }).catch((error)=> {
       toast.error("Login Unsuccessfull",{ duration: 5000});
@@ -67,6 +67,9 @@ export const Login = () => {
           </div>
           <div className="others">
             <NavLink to='/login'>Forgot password?</NavLink>
+          </div>
+          <div className="others">
+            <NavLink to='/registration'>Create Account.</NavLink>
           </div>
         </div>
 

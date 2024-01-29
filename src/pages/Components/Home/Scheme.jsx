@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 export const Scheme = (Data) => {
   return (
@@ -10,7 +11,7 @@ export const Scheme = (Data) => {
         <br />and typesetting industry.&quot;
       </p>
       <div className="latestProductButton">
-        <a href="" className="primary-btn">Shop Now</a>
+        <Link to="/shop" className="primary-btn">Shop Now</Link>
       </div>
     </div>
     <div className="image-map">

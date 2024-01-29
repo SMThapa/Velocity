@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTitle } from '../hooks/useTitle';
+import { Link } from 'react-router-dom';
 import '../style/UserProfile.scss'
 
 
@@ -18,10 +19,26 @@ export const UserProfile = () => {
           <p>Your account is under review.</p>
         </div>
 
+        <div className="userChatSection">
+
+          <p className='live-chat-message'>*Live chat is disabled right now.*</p>
+          <div className="chat">
+            <div className="messages">
+              <div className="messages-content"></div>
+            </div>
+            <div className="message-box">
+              <textarea type="text" className="message-input" placeholder="Type message..."></textarea>
+              <button type="submit" className="message-submit">Send</button>
+            </div>
+          </div>
+          <div className="overlay">
+
+          </div>
+      </div>
 
       </div>
       <div className="userCreds">
-        <h1 className='title'>User Info.</h1>
+        <h1 className='title'>User Info. <Link to=""><i className="bi bi-pencil-square"></i></Link></h1>
           <div className="credsGrid">
             <p>Name:</p>
             <span>{data[0].name}</span>
@@ -68,21 +85,6 @@ export const UserProfile = () => {
           <p>Credit Limit: </p><span>{data[0].credit_limit}</span>
           </div>
         </div>
-
-
-      <div className="userChatSection">
-        <div className="chat">
-          <div className="messages">
-            <div className="messages-content"></div>
-          </div>
-          <div className="message-box">
-            <textarea type="text" className="message-input" placeholder="Type message..."></textarea>
-            <button type="submit" className="message-submit">Send</button>
-          </div>
-
-        </div>
-        {/* <div className="bg"></div> */}
-      </div>
     </div>
   )
 }

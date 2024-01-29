@@ -1,6 +1,6 @@
+import toast from "react-hot-toast";
 import axios from 'axios';
 import glass from '../assets/images/glass1.jpg';
-import toast from 'react-hot-toast';
 
 export const Card = (data) => {
 
@@ -17,14 +17,14 @@ export const Card = (data) => {
     // Example Axios POST request
     axios.post('https://faradic.codtrees-dev.cloud/api/cart/add', { pid , product_qty , user_id})
       .then(response => {
-        // console.log('Add to cart successful:', response.data);
-        toast.success(response.data.message, {duration:5000})
+        console.log('Add to cart successful:', response.data);
+        toast.success("Add to cart successful",{ duration: 5000});
         
         // Perform any additional logic after successful post
       })
       .catch(error => {
-        // console.error('Error adding to cart:', error.response.data.message);
-        toast.error(error.response.data.message, {duration:5000})
+        toast.error("Item Is Already in the Cart",{ duration: 5000});
+        console.error('Error adding to cart:', error.response.data.message);
       })
   };
 
@@ -40,14 +40,16 @@ export const Card = (data) => {
     // Example Axios POST request
     axios.post('https://faradic.codtrees-dev.cloud/api/wish/add', { pid ,  user_id})
       .then(response => {
-        // console.log('Add to WishList successful:', response.data);
-        toast.success(response.data.message, {duration:5000})
+
+        toast.success("Add to WishList successful",{ duration: 5000});
+        console.log('Add to WishList successful:', response.data);
         
         // Perform any additional logic after successful post
       })
       .catch(error => {
-        // console.error('Error adding to Wishlist:',  error.response.data.message);
-        toast.error(error.response.data.message, {duration:5000})
+
+        toast.error("Item Is Already in the Wishlist",{ duration: 5000});
+        console.error('Error adding to Wishlist:',  error.response.data.message);
       })
   };
 
@@ -73,8 +75,8 @@ export const Card = (data) => {
         </div>
       </div>        
       <div className="card-text">
-          <p className='product-title'>{data.data.product_name}</p>
-          <p className="product-price">Rs. {data.data.product_price}</p>
+        <p className='product-title'>{data.data.product_name}</p>
+        <p className="product-price">Rs. {data.data.product_price}</p>
       </div>
     </div>
   )

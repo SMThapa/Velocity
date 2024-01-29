@@ -15,9 +15,6 @@ import ecoCate from '../assets/images/img5.jpg';
 import streetCate from '../assets/images/img7.jpg';
 
 
-import testimonialImg from '../assets/images/img8.jpg';
-
-
 // usp images
 import usp1 from '../assets/USP/usp1.png';
 import usp2 from '../assets/USP/usp2.png';
@@ -27,22 +24,28 @@ import usp3 from '../assets/USP/usp3.png';
 import '../style/Home.scss';
 import { Link } from "react-router-dom";
 
+import { useContext } from "react";
+import { SignInContext } from "../App";
 
 export const Home = () => {
 
   useTitle('Home | Velocity Opticals')
 
+  const [signedIn, setSignedIn] = useContext(SignInContext)
 
   return (
     <>
       <HeroBanner/>
 
-      <div className="centerContainer">
-        <div className="home-login-register">
-          <p className="p-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,</p>
-          <Link to="/registration" className="primary-btn">Login or Register</Link>
-        </div>    
-      </div>   
+      {
+        signedIn ? <div className="margin-bottom-100px"></div>:
+          <div className="home-login">
+            <div className="home-login-register">
+              <p className="p-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,</p>
+              <Link to="/registration" className="primary-btn">Login or Register</Link>
+            </div>    
+          </div> 
+      }  
 
       <AboutUs Img={aboutUsImg}/>
 
@@ -50,7 +53,7 @@ export const Home = () => {
         <div className="title partner-title">Partner With Us</div>
         <div className="partner-with-us">
           <p className="p-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,</p>
-          <a to="" className="primary-btn">Let&apos;s Go!</a>
+          <Link to="/partnerus" className="primary-btn">Let&apos;s Go!</Link>
         </div>    
       </div>      
 
@@ -71,7 +74,7 @@ export const Home = () => {
           <p className="title">Our Product</p>
           <ProductCarousel/>
           <div className="latestProductButton">
-            <a href="" className="primary-btn">Shop Now</a>
+            <Link to="/shop" className="primary-btn">Shop Now</Link>
           </div>
         </div>
       </div>
@@ -88,7 +91,7 @@ export const Home = () => {
 
       <Categories ImgArr={[allCate, womenCate, menCate, ecoCate, streetCate]}/>
 
-      <Testimonial Img={testimonialImg}/>
+      <Testimonial/>
 
       <div className="latestProduct">
         <div className="carouselContainer">

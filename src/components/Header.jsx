@@ -28,7 +28,7 @@ export const Header = () => {
           <NavLink to='/'>Home</NavLink>
           <NavLink to='/shop'>Shop</NavLink>
           <NavLink to='/aboutUs'>About Us</NavLink>
-          <NavLink to='/partnerUs'>Partner Us</NavLink>
+          <NavLink to='/partnerUs'>Partner With Us</NavLink>
           <NavLink to='/blogs'>Blogs</NavLink>
           <NavLink to='/contact'>Contacts</NavLink>
         </div>

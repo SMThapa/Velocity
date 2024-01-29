@@ -144,7 +144,7 @@ select {
 	}
 }
 .breadcrumb_body {
-	height: 421px;
+	height: 330px;
 	background-image: url("https://wpbingosite.com/wordpress/enoza/wp-content/uploads/2023/08/bg-breadcrumb.jpg");
 	background-size: cover;
 }
@@ -155,16 +155,25 @@ select {
 	padding-top: 10px;
 }
 .load-more {
-	background-color: $background-color_1;
-	color: $color_5 !important;
-	padding: 5px 10px;
-	border-radius: 4px;
-	font-size: 20px;
-	margin: 50px 0;
-	display: inline-block;
+	// background-color: $background-color_1;
+	// color: $color_5 !important;
+	// padding: 5px 10px;
+	// border-radius: 4px;
+	// font-size: 20px;
+	// margin: 50px 0;
+	// display: inline-block;
+	text-decoration: none;
+    background-color: #FCD107;
+    font-size: 12px;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-align: center;
+    width: auto;
 	&:hover {
-		background-color: $background-color_2;
-		text-decoration: none;
+		border-radius: 25px;
 	}
 }
 .round {

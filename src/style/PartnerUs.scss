@@ -1,24 +1,60 @@
 .topBanner{
     background-image:  linear-gradient(
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3)
-      ),url('../assets/banner/baneer1.webp');
-    height: 350px;
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),url('../assets/images/img9.jpg');
+    height: 600px;
     background-size: cover;
     background-position: center;
+    position: relative;
 
+    .bannerContent{
+        max-width: 600px;
+        position: absolute;
+        bottom: 30%;
+        left: 10%;
+
+        p{
+            color: white;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .top-p{
+            border-bottom: 1px solid white;
+            width: fit-content;
+        }
+        .last-p{
+            margin-bottom: 25px;
+        }
+        .big-text{
+            font-size: 35px;
+        }
+        .primary-btn{
+            margin: 25px 0;
+            color: black;
+        }
+    }
 }
 .partnerUs{
     max-width: 1200px;
     width: 100%;
-    margin: auto auto;
-    
-    .heading {
-        font-size: 32px;
-        line-height: 35px;
-        letter-spacing: .05em;
-        font-weight: 700;
-        margin-bottom: 30px;
+    margin: auto;
+    margin-bottom: 50px;
+    .our-partner-program{
+        margin-bottom: 40px;
+        .heading {
+            font-size: 32px;
+            line-height: 35px;
+            letter-spacing: .05em;
+            font-weight: 700;
+            text-align: center;
+            border: none;
+            margin: 40px 0 20px;
+        }
+        .p-content{
+            text-align: justify;
+            font-size: 400;
+        }
     }
 
     .experience-banner {
@@ -45,7 +81,7 @@
     .partner-us-content {
         padding: 35px 0;
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-between;
         .image {
             background-image: url('../assets/images/partnerUs.jpg');
@@ -58,7 +94,10 @@
             width: 54%;
             display: flex;
             flex-direction:column ;
-            
+            ul{
+                margin-top: 12px;
+                margin-left: 25px;
+            }
             p{
                 margin-bottom: 20px;
                 font-size: 16px;
