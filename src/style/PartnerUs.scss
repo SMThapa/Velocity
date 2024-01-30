@@ -1,3 +1,5 @@
+@import "_color";
+
 .topBanner{
     background-image:  linear-gradient(
         rgba(0, 0, 0, 0.6),
@@ -65,7 +67,7 @@
         .box {
             text-align: center;
             .count {
-                color: #fdd007;
+                color: $color_yellow_2;
                 font-size: 70px;
                 span {
                     font-size: 50px;

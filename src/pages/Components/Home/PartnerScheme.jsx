@@ -1,53 +1,37 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from "swiper/modules";
-
-// Import Swiper styles
-import 'swiper/css';
-import "swiper/css/navigation";
-
-import img from '../../../assets/PartnerSchemeImg/partnerScheme.jpg';
-import img1 from '../../../assets/PartnerSchemeImg/partnerScheme1.webp';
-import img2 from '../../../assets/PartnerSchemeImg/partnerScheme2.jpg';
-
 export const PartnerScheme = () => {
   return (
     <div className="partnerScheme">
         <div className="title">Partner Scheme</div>
-        <Swiper
-            navigation={true}
-            modules={[Navigation]}
-            spaceBetween={0}
-            slidesPerView={1}
-            loop={true}
-            className="mySwiper"
-        >
-
-        <SwiperSlide>
-            <div className="partnerSchemeCard">
-                <a href="">
-                    <img src={img1} alt="" />
-                </a>
+        <main className="page-content">
+            <div className="partner-scheme-card">
+                <div className="content">
+                <h2 className="partner-scheme-title">Mountain View</h2>
+                <p className="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+                <button className="btn">View Trips</button>
+                </div>
             </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-            <div className="partnerSchemeCard">
-                <a href="">
-                    <img src={img} alt="" />
-                </a>
+            <div className="partner-scheme-card">
+                <div className="content">
+                <h2 className="partner-scheme-title">To The Beach</h2>
+                <p className="copy">Plan your next beach trip with these fabulous destinations</p>
+                <button className="btn">View Trips</button>
+                </div>
             </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-            <div className="partnerSchemeCard">
-                <a href="">
-                    <img src={img2} alt="" />
-                </a>
+            <div className="partner-scheme-card">
+                <div className="content">
+                <h2 className="partner-scheme-title">Desert Destinations</h2>
+                <p className="copy">It&apos;s the desert you&apos;ve always dreamed of</p>
+                <button className="btn">Book Now</button>
+                </div>
             </div>
-        </SwiperSlide>
-
-      </Swiper>
-
+            <div className="partner-scheme-card">
+                <div className="content">
+                <h2 className="partner-scheme-title">Explore The Galaxy</h2>
+                <p className="copy">Seriously, straight up, just blast off into outer space today</p>
+                <button className="btn">Book Now</button>
+                </div>
+            </div>
+        </main>
     </div>
   )
 }

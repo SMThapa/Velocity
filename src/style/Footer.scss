@@ -1,11 +1,9 @@
-// $color_1: #8F9992;
-$color_1: black;
+@import "color";
+
 $color_2: #44332B;
-$color_2: #44332B;
-$background-color_1: #FFDE2E;
 
 footer {
-	background-color: $background-color_1;
+	background-color: $background-color_white;
 }
 .footer-contents {
 	max-width: 1440px;
@@ -26,10 +24,10 @@ footer {
 		margin: 6px 29px;
 	}
 	a {
-		color: $color_1;
+		color: $color_black_2;
 		text-decoration: none;
 		&:hover {
-			color: $color_2;
+			color: $color_yellow;
 		}
 	}
 	.social-media {
@@ -46,6 +44,7 @@ footer {
 		p{
 			font-size: 15px;
 			padding: 5px 0;
+			color: $color_black_2;
 		}
 
 	}

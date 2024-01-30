@@ -1,15 +1,11 @@
-$color_1: black;
-$color_2: #FCD107;
-$color_3: white;
-$background-color_1: white;
-$background-color_2: #edede9;
-$background-color_3: transparent;
-$background-color_4: #FCD107;
+@import "color";
+
+$searchBar-background: #edede9;
 
 nav {
 	position: sticky;
 	top: 0;
-	background-color: $background-color_1;
+	background-color: $background-color_white;
 	z-index: 10;
 	padding: 16px 0;
 	box-shadow: rgba(0, 0, 0, 0.03) 0px 4px 6px -1px, rgba(0, 0, 0, 0.03) 0px 2px 4px -1px;
@@ -28,15 +24,15 @@ nav {
 				text-decoration: none;
 				margin: 0 20px;
 				vertical-align: sub;
-				color: $color_1;
+				color: $color_black;
 				transition: all .2s ease;
 				&:hover {
-					color: $color_2;
+					color: $color_yellow;
 				}
 			}
 			a.active {
-				color: $color_1;
-				border-bottom: medium solid $color_2;
+				color: $color_black;
+				border-bottom: medium solid $color_yellow;
 			}
 			@media screen and (max-width:1200px){
 				display: none;
@@ -72,19 +68,19 @@ nav {
 			display: flex;
 			align-items: center;
 			.searchBar {
-				background-color: $background-color_2;
+				background-color: $searchBar-background;
 				border-radius: 40px;
 				button {
 					margin: 0 18px;
 					font-size: 18px;
 					border: none;
-					background-color: $background-color_3;
+					background-color: transparent;
 					vertical-align: middle;
 					cursor: pointer;
 				}
 				input {
 					border: none;
-					background-color: $background-color_3;
+					background-color: transparent;
 					outline: none;
 					line-height: 38px;
 					padding-right: 20px;
@@ -103,9 +99,9 @@ nav {
 					transition: all .5s ease;
 				}
 				a {
-					color: $color_1;
+					color: $color_black;
 					vertical-align: sub;
-					background-color: $background-color_4;
+					background-color: $color_background_yellow;
 					padding: 10px 16px;
 					border-radius: 25px;
 				}
