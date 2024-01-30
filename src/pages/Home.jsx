@@ -58,7 +58,7 @@ export const Home = () => {
       </div>      
 
       <div className="OurUSP">
-        <p className="title">Our USP</p>
+        {/* <p className="title">Our USP</p> */}
         <div className="uspCards">
           <UspCard img={usp1}/>
           <UspCard img={usp2}/>
