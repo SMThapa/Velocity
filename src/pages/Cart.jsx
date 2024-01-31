@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import glass from '../assets/images/glass1.jpg';
 import toast from "react-hot-toast";
+import { NavLink } from 'react-router-dom';
 
 export const Cart = () => {
   const [cartdata, setcartdata] = useState([]);
@@ -141,7 +142,7 @@ export const Cart = () => {
             <h2>Cart Totals</h2>
             <p>Subtotal: <span>₹{total}</span></p>
             <p>Shipping: <span>₹{shipping}</span></p>
-            <button className="button-two"><span>Checkout</span></button>
+            <NavLink to={'/checkout'} className="button-two"><span>Checkout</span></NavLink>
           </div>
         </div>
       </div>

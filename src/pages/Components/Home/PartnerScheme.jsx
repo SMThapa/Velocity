@@ -5,7 +5,7 @@ import img2 from '../../../assets/PartnerSchemeImg/partnerScheme2.jpg';
 export const PartnerScheme = () => {
   return (
     <div className="partnerScheme">
-        <div className="title">Partner Scheme</div>
+        <div className="title">Partner Schemes</div>
         
         <div className="partner-scheme-cards">
 

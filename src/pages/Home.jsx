@@ -1,4 +1,4 @@
-import { HeroBanner, AboutUs, Scheme, Categories, Testimonial, PartnerScheme, EnquireForm} from "./Components/Home/index";
+import { HeroBanner, AboutUs, Scheme, Categories, Testimonial, EnquireForm, PartnerSchemeSlider} from "./Components/Home/index";
 import { ProductCarousel, UspCard, BlogCard } from "../components/index";
 
 // title
@@ -57,6 +57,8 @@ export const Home = () => {
         </div>    
       </div>      
 
+      <PartnerSchemeSlider/>
+
       <div className="OurUSP">
         {/* <p className="title">Our USP</p> */}
         <div className="uspCards">
@@ -66,8 +68,6 @@ export const Home = () => {
           <UspCard img={usp1}/>
         </div>
       </div>
-
-      <PartnerScheme/>
 
       <div className="latestProduct">
         <div className="carouselContainer">

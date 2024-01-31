@@ -106,7 +106,7 @@ export const Registration = () => {
       <div className="logo"></div>
       <div className="form-content">
       <form className="theForm" onSubmit={handleSubmit}>
-        <div className="title">Registration Form</div>
+        <div className="title">Partner With Us</div>
 
         <div className="input-box">
           <input type="text" name='name' onChange={e=>setName(e.target.value)} value={name} required/>

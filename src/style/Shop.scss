@@ -24,7 +24,8 @@ body {
 	padding-right: 25px;
 }
 .row {
-	display: flex;
+	display: grid;
+	grid-template-columns: 30% 70%;
 	align-items: center;
 	flex-wrap: wrap;
 	justify-content: space-around;
