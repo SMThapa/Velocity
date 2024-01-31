@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import img from '../../../assets/PartnerSchemeImg/partnerScheme.jpg';
 import img1 from '../../../assets/PartnerSchemeImg/partnerScheme1.webp';
 import img2 from '../../../assets/PartnerSchemeImg/partnerScheme2.jpg';
+import { Link } from 'react-router-dom';
 
 export const PartnerSchemeSlider = () => {
   return (
@@ -24,25 +25,25 @@ export const PartnerSchemeSlider = () => {
 
         <SwiperSlide>
             <div className="partnerSchemeCard">
-                <a href="">
+                <Link to={'/partnerScheme'}>
                     <img src={img1} alt="" />
-                </a>
+                </Link>
             </div>
         </SwiperSlide>
 
         <SwiperSlide>
             <div className="partnerSchemeCard">
-                <a href="">
+                <Link to={'/partnerScheme'}>
                     <img src={img} alt="" />
-                </a>
+                </Link>
             </div>
         </SwiperSlide>
 
         <SwiperSlide>
             <div className="partnerSchemeCard">
-                <a href="">
+                <Link to={'/partnerScheme'}>
                     <img src={img2} alt="" />
-                </a>
+                </Link>
             </div>
         </SwiperSlide>
 
