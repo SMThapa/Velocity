@@ -9,20 +9,80 @@ nav {
 	z-index: 50;
 	padding: 16px 0;
 	box-shadow: rgba(0, 0, 0, 0.03) 0px 4px 6px -1px, rgba(0, 0, 0, 0.03) 0px 2px 4px -1px;
+
+	.searchBar{
+		position: absolute;
+		bottom: -75%;
+		width: 100%;
+		height: 90px;
+		background-color: $color_yellow;
+		opacity: 0;
+		transition: all .5s ease;
+
+		.search-input{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.border-bottom{
+				border-bottom:1px solid rgba(0,0,0,0.5);
+				width: 60%;
+			}
+
+			input{
+				border: none;
+				width: 90%;
+				// border-bottom:1px solid rgba(0,0,0,0.5);
+				background-color: transparent;
+				outline: none;
+				padding: 5px;
+				font-size: 17px;
+			}
+			
+			.bi{
+				cursor: pointer;
+				font-size: 17px;
+				margin: 0 12px;
+				float: right;
+				&::before {
+					vertical-align: -webkit-baseline-middle;
+				}
+			}
+
+			.search-search{
+				color: $color_black_2;
+				font-weight: 500;
+				cursor: pointer;
+				margin: 0 12px;
+			}
+			
+		}
+	}
+	.searchBarShow{
+		opacity: 1;
+		bottom: -89%;
+	}
+
 	.theHeader {
 		max-width: 1660px;
 		display: grid;
-		grid-template-columns: 42.5% 15% 42.5%;
+		grid-template-columns:20% auto 20%;
 		justify-content: space-between;
 		align-items: center;
 		margin: auto;
 		padding: 0 1%;
 
+		@media  screen and (max-width: 1200px) {
+			grid-template-columns:50% 50%;
+			padding: 0 5%;
+		}
+
 		.navItems {
-			justify-self: start;
+			justify-self: center;
 			a {
 				text-decoration: none;
-				margin: 0 10px;
+				margin: 0 16px;
 				vertical-align: sub;
 				color: $color_black;
 				transition: all .2s ease;
@@ -40,6 +100,11 @@ nav {
 		}
 
 		.hamburgerMenu{
+			.bi{
+				font-size: 28px;
+    			margin: 0 30%;
+				cursor: pointer;
+			}
 
 			@media screen and (min-width:1199px) {
 				display: none;
@@ -50,47 +115,44 @@ nav {
 			justify-self: center;
 			text-transform: uppercase;
 			text-align: center;
-			height: 70px;
+			height: 70px;			
+			@media screen and (max-width:1199px) {
+				height: 60px;
+				justify-self: left;
+			}
+
 
 			img{
 				height: 100%;
 				width: 100%;
 				filter: brightness(.15);
 			}
-
-			@media screen and (max-width:1200px){
-				justify-self: left;
-			}
 		}
 
 		.navButtons {
-			justify-self: end;
+			justify-self: center;
 			display: flex;
 			align-items: center;
-			.searchBar {
+
+			@media screen and (max-width:1199px) {
+				justify-self: right;
+			}
+
+			.search{
+				cursor: pointer;
 				background-color: $searchBar-background;
-				border-radius: 40px;
-				button {
-					margin: 0 18px;
-					font-size: 18px;
-					border: none;
-					background-color: transparent;
+				border: 1px solid $searchBar-background;
+				padding: 6px 10px;
+				border-radius: 50%;
+				aspect-ratio: 1/1;
+				margin: 0 5px;
+				.bi{
 					vertical-align: middle;
-					cursor: pointer;
-				}
-				input {
-					border: none;
-					background-color: transparent;
-					outline: none;
-					line-height: 38px;
-					padding-right: 20px;
-					font-weight: 500;
-					font-size: 16px;
 				}
 			}
 
 			.login {
-				padding: 0 20px;
+				padding: 0 5px;
 				vertical-align: middle;
 				.bi {
 					font-size: 21px;
@@ -108,7 +170,11 @@ nav {
 			}
 
 			.navUtilButtons{
-				margin: 0 15px;
+				.active .bi{
+					color: $color_yellow !important;
+					font-size: 24px;
+					margin: 0 5px;
+				}
 				.bi{
 					font-size: 24px;
 					margin: 0 5px;

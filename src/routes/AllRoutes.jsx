@@ -1,6 +1,6 @@
 import {Routes, Route} from 'react-router-dom';
 import {Home, PageNotFound, AboutUs, Shop, Registration, Login, Cart, UserProfile, WishList, PartnerUs, CheckOut, PartnerScheme} from '../pages/index';
-
+import { TestPage } from '../pages/TestPage';
 export const AllRoutes = () => {
   return (
     <Routes>
@@ -19,6 +19,9 @@ export const AllRoutes = () => {
       <Route path="/registration" element={<Registration/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="*" element={<PageNotFound/>}/>
+
+
+      <Route path='/test' element={<TestPage/>} />
     </Routes>
   )
 }

@@ -27,6 +27,13 @@ export const PartnerSchemeSlider = () => {
             <div className="partnerSchemeCard">
                 <Link to={'/partnerScheme'}>
                     <img src={img1} alt="" />
+                    <div className="sliderContents">
+                        <div className="sliderBannerText">
+                            <div className="title">Some Title</div>
+                            <div className="p-content">Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ...</div>
+                            <button className="primary-btn">Lets Go!</button>
+                        </div>
+                    </div>
                 </Link>
             </div>
         </SwiperSlide>
@@ -35,6 +42,13 @@ export const PartnerSchemeSlider = () => {
             <div className="partnerSchemeCard">
                 <Link to={'/partnerScheme'}>
                     <img src={img} alt="" />
+                    <div className="sliderContents">
+                        <div className="sliderBannerText">
+                            <div className="title">Some Title</div>
+                            <div className="p-content">Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ...</div>
+                            <button className="primary-btn">Lets Go!</button>
+                        </div>
+                    </div>
                 </Link>
             </div>
         </SwiperSlide>
@@ -43,6 +57,13 @@ export const PartnerSchemeSlider = () => {
             <div className="partnerSchemeCard">
                 <Link to={'/partnerScheme'}>
                     <img src={img2} alt="" />
+                    <div className="sliderContents">
+                        <div className="sliderBannerText">
+                            <div className="title">Some Title</div>
+                            <div className="p-content">Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ...</div>
+                            <button className="primary-btn">Lets Go!</button>
+                        </div>
+                    </div>
                 </Link>
             </div>
         </SwiperSlide>
