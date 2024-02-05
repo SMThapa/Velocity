@@ -93,7 +93,7 @@ export const ContactUs = () => {
         </main>
 
         <aside>
-            <div className='categories'>
+            <div className='contact-categories'>
                 <div className='headcontainer'>
                     <h4>Address</h4>
                 </div>
@@ -102,7 +102,7 @@ export const ContactUs = () => {
                 </div>
             </div>
 
-            <div className="categories">
+            <div className="contact-categories">
                 <div className='headcontainer'>
                     <h4>Phone</h4>
                 </div>
@@ -111,7 +111,7 @@ export const ContactUs = () => {
                 </div>
             </div>
 
-            <div className="categories">
+            <div className="contact-categories">
                 <div className='headcontainer'>
                     <h4>Email</h4>
                 </div>
@@ -121,7 +121,7 @@ export const ContactUs = () => {
                 </div>
             </div>
 
-            <div className="categories">
+            <div className="contact-categories">
                 <div className='headcontainer'>
                     <h4>Opening Time</h4>
                 </div>
@@ -130,7 +130,7 @@ export const ContactUs = () => {
                 </div>
             </div>
 
-            <div className="categories">
+            <div className="contact-categories">
                 <div className='headcontainer'>
                     <h4>Socials</h4>
                 </div>
@@ -139,22 +139,22 @@ export const ContactUs = () => {
                     <ul className='social'>
                         <li>
                             <a className="icons" href=''>
-                                {/* <FontAwesomeIcon icon={faTwitter} /> */}
+                            <i className="bi bi-twitter-x"></i>
                             </a>
                         </li>
                         <li>
                             <a className="icons" href=''>
-                                {/* <FontAwesomeIcon icon={faInstagram} /> */}
+                            <i className="bi bi-instagram"></i>
                             </a>
                         </li>
                         <li>
                             <a className="icons" href=''>
-                                {/* <FontAwesomeIcon icon={faFacebook} /> */}
+                            <i className="bi bi-facebook"></i>
                             </a>
                         </li>
                         <li>
                             <a className="icons" href=''>
-                                {/* <FontAwesomeIcon icon={faDribbble} /> */}
+                            <i className="bi bi-linkedin"></i>
                             </a>
                         </li>
                     </ul>

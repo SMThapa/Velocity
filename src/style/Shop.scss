@@ -22,7 +22,7 @@ $background-color_3: #E7E7E7;
 	.row {
 		display: grid;
 		grid-template-columns: 30% 70%;
-		align-items: center;
+		// align-items: center;
 		flex-wrap: wrap;
 		justify-content: space-around;
 	}
@@ -141,7 +141,7 @@ $background-color_3: #E7E7E7;
 		}
 	}
 	.breadcrumb_body {
-		height: 330px;
+		height: fit-content;
 		background-image: url("https://wpbingosite.com/wordpress/enoza/wp-content/uploads/2023/08/bg-breadcrumb.jpg");
 		background-size: cover;
 	}
@@ -193,6 +193,11 @@ $background-color_3: #E7E7E7;
 	}
 	.category-slider {
 		padding-top: 5vh;
+		display: grid;
+		grid-template-columns: 100%;
+		flex-wrap: wrap;
+		max-width: fit-content;
+		margin: auto;
 	}
 	.mySwiper {
 		a {
@@ -248,8 +253,8 @@ $background-color_3: #E7E7E7;
 		}
 	}
 	.product-filter {
-		position: relative;
-		bottom: 38vh;
+		margin-top: 100px;
+		position: relative;		
 	}
 	.Category-section {
 		h4 {

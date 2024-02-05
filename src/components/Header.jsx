@@ -9,6 +9,11 @@ import { SignInContext } from '../App';
 
 export const Header = () => {
 
+  const [navShadow, setShadow] = useState(false);
+  window.addEventListener('scroll', ()=>{
+    setShadow(window.pageYOffset >= 40 ? true : false)
+  })
+
   const navigate = useNavigate();
 
   const [signedIn, setSignedIn] = useContext(SignInContext)
@@ -34,7 +39,7 @@ export const Header = () => {
   }
 
   return (
-    <nav>
+    <nav className={`${navShadow ? 'shadow' : ''}`}>
       <div className="theHeader">
         <div className="navLogo">
           <NavLink to='/'>
@@ -48,6 +53,8 @@ export const Header = () => {
           <NavLink to='/aboutUs'>About Us</NavLink>
           <NavLink to='/partnerUs'>Partner With Us</NavLink>
           <NavLink to='/blogs'>Blogs</NavLink>
+          <NavLink to='/faq'>FAQ</NavLink>
+
           <NavLink to='/contact'>Contacts</NavLink>
         </div>
 

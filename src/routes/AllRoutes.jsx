@@ -1,5 +1,5 @@
 import {Routes, Route} from 'react-router-dom';
-import {Home, PageNotFound, AboutUs, Shop, Registration, Login, Cart, UserProfile, WishList, PartnerUs, CheckOut, PartnerScheme, ContactUs, Blogs} from '../pages/index';
+import {Home, PageNotFound, AboutUs, Shop, Registration, Login, Cart, UserProfile, WishList, PartnerUs, CheckOut, PartnerScheme, ContactUs, Blogs, FAQ} from '../pages/index';
 import { TestPage } from '../pages/TestPage';
 export const AllRoutes = () => {
   return (
@@ -11,6 +11,7 @@ export const AllRoutes = () => {
       <Route path='/partnerScheme' element={<PartnerScheme/>}/>
       <Route path='/contact' element={<ContactUs/>}/>
       <Route path='/blogs' element={<Blogs/>}/>
+      <Route path='/faq' element={<FAQ/>}/>
       
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/wishlist" element={<WishList/>}/>

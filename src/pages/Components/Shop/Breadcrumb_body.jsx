@@ -35,8 +35,7 @@ export const Breadcrumb_body = () => {
             </li>
           </ul>
         </div>
-        <div className="row category-slider">
-          <div className="col-md-3"></div>
+        <div className=" category-slider">
           <div className="col-md-6">
             <div className="comments">
               <Swiper

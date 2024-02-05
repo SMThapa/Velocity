@@ -6,7 +6,7 @@ export const Blogs = () => {
   return (
     <div className="blogs-container">
       <header>
-        <h1 className="App-header">Furniture</h1>
+        <h1 className="App-header">Blogs</h1>
       </header>
 
       <main>

@@ -11,7 +11,7 @@
     padding: 25px 25px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr 0.5fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
+    // grid-template-rows: 0.5fr 1fr 1fr;
     grid-template-areas:
         "header header"
         "map map"
@@ -56,9 +56,10 @@
     }
 
     aside {
+        padding: 40px 0;
         grid-area: aside;
         text-align: left;
-        .categories {
+        .contact-categories {
             margin-bottom: 30px;
             text-align: left;
             border-bottom: 1px solid #e4e4e4;
@@ -87,22 +88,16 @@
                             color: #222;
                             background-color: #fff;
                         
-                            border-radius: 60%;
+                            border-radius: 50%;
                             text-align: center;
                         
                             vertical-align: middle;
-                            padding: 15px;
+                            padding: 9px 16px;
                             display: inline-block;
                             &:hover {
                                 color: #fff;
                                 background-color: #222;
-                            
-                                border-radius: 60%;
-                                text-align: center;
-                            
-                                vertical-align: middle;
-                                padding: 15px;
-                                display: inline-block;
+                                border-radius: 50%;
                             }
                         }
                     }
