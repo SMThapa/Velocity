@@ -4,6 +4,8 @@ export {AboutUs} from './AboutUs';
 export {Shop} from './Shop'
 export {PartnerUs} from './PartnerUs';
 export {PartnerScheme} from './PartnerScheme';
+export {ContactUs} from './ContactUs';
+export {Blogs} from './Blogs';
 
 export {Cart} from './Cart';
 export {UserProfile} from './UserProfile';

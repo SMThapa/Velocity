@@ -10,13 +10,16 @@ nav {
 	padding: 16px 0;
 	box-shadow: rgba(0, 0, 0, 0.03) 0px 4px 6px -1px, rgba(0, 0, 0, 0.03) 0px 2px 4px -1px;
 
+	
+
 	.searchBar{
 		position: absolute;
-		bottom: -75%;
+		top: 7%;
 		width: 100%;
 		height: 90px;
 		background-color: $color_yellow;
 		opacity: 0;
+		z-index: -1;
 		transition: all .5s ease;
 
 		.search-input{
@@ -61,7 +64,8 @@ nav {
 	}
 	.searchBarShow{
 		opacity: 1;
-		bottom: -89%;
+		top: 100%;
+		z-index: 10;
 	}
 
 	.theHeader {
@@ -154,6 +158,10 @@ nav {
 			.login {
 				padding: 0 5px;
 				vertical-align: middle;
+
+				@media screen and (width < 1200px) {
+					display: none;
+				}
 				.bi {
 					font-size: 21px;
 					vertical-align: middle;

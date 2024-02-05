@@ -13,7 +13,6 @@ export const Cart = () => {
     const user_details = JSON.parse(sessionStorage.getItem('User'));
     const user_id = user_details[0].id;
 
-    
     axios.post('https://faradic.codtrees-dev.cloud/api/cartshow', { user_id })
       .then((res) => {
         setcartdata(res.data.cart_data);
@@ -78,19 +77,19 @@ export const Cart = () => {
 
 
   const subtotal = cartdata.reduce((sum, item) => {
-      const price = item.product_salePrice ? item.product_salePrice : item.product_price;
-      return sum + parseFloat(price) * item.product_qty;
-    }, 0);
+    const price = item.product_salePrice ? item.product_salePrice : item.product_price;
+    return sum + parseFloat(price) * item.product_qty;
+  }, 0);
   
-    const shipping = 0; // Replace with your shipping cost calculation
-    const tax = 0; // Replace with your tax calculation
-    const total = subtotal + shipping + tax;
+  const shipping = 0; // Replace with your shipping cost calculation
+  const tax = 0; // Replace with your tax calculation
+  const total = subtotal + shipping + tax;
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleCheckOut = ()=>{
-      navigate('/checkOut')
-    }
+  const handleCheckOut = ()=>{
+    navigate('/checkOut')
+  }
 
 return (
   <div className="cartPage">

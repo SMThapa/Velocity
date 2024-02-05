@@ -24,7 +24,7 @@ export const Shop = () => {
   },[])
 
   return (
-    <div>
+    <div className='shop-style'>
       <Breadcrumb_body/>
 
       <div className="row">
