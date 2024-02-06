@@ -1,5 +1,5 @@
 import toast from 'react-hot-toast';
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../style/checkout.scss'
@@ -26,17 +26,24 @@ export const CheckOut = () => {
         return sum + parseFloat(price) * item.product_qty;
     }, 0);
 
-    const userData = JSON.parse(sessionStorage.getItem('User'));
+    const userData = JSON.parse(sessionStorage.getItem('User'))[0];
 
     const navigate = useNavigate()
 
-    const proceedPay = () =>{
-        toast.success('Thank you for your order, will get back to you soon!!', {duration:5000})
-        
-        navigate('/')
+    const [warning, setWarning] = useState(false);
+    const [pay, setPay]=useState(false);
+
+    const proceedPay = (event) =>{
+        event.preventDefault();
+        if(pay){
+            toast.success('Thank you for your order, will get back to you soon!!', {duration:5000})
+            navigate('/')
+        }else{
+            setWarning(true);
+        }
     }
 
-
+    
 
   return (
     <>
@@ -48,10 +55,10 @@ export const CheckOut = () => {
                     
                     <p className='pin'><i className="bi bi-geo-alt-fill"></i> Pincode <span className='address-option'>Change Address</span></p>
                     <div className="address-details">
-                        <p className='strong'>Name</p>
-                        <p className='soft-text'>Address</p>
+                        <p className='strong'>{userData.name}</p>
+                        <p className='soft-text'>{userData.address}</p>
                         <p className='soft-text'>Pincode</p>
-                        <p className='strong'>Email: <span className='soft-text'>email@address.com</span> </p>
+                        <p className='soft-text'>{userData.email}</p>
                     </div>
 
                     <div className="edit-add-address">
@@ -75,16 +82,19 @@ export const CheckOut = () => {
                         <form action="">
                             <div className="form-items">
                                 <div className="payment-input">
-                                    <input type="radio" id='phonePay' name='payment_method'/>
-                                    <label htmlFor="phonePay">Phone Pay</label>
+                                    <input type="radio" id='phonePay' name='payment_method' onClick={()=>setPay(true)}/>
+                                    <label htmlFor="phonePay" onClick={()=>setPay(true)}>Phone Pay</label>
                                 </div>
                                 <div className="payment-input">
-                                    <input type="radio" id='cod' name='payment_method'/>
-                                    <label htmlFor="cod">Cash On Delivery</label>
+                                    <input type="radio" id='cod' name='payment_method' onClick={()=>setPay(true)}/>
+                                    <label htmlFor="cod" onClick={()=>setPay(true)}>Cash On Delivery</label>
                                 </div>
                             </div>
 
-                            <button type='submit' className='primary-btn'>Proceed to Pay</button>
+                            <div className="allow-payment">
+                                <p className={warning ? 'warning-show':'warning'}>*Please select a payment method.*</p>
+                                <button type='submit' className='primary-btn' onClick={proceedPay}>Proceed to Pay</button>
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -243,7 +243,7 @@ $background-color_3: #E7E7E7;
 		background-color: $background-color_3;
 		width: 100%;
 		height: 2px;
-		margin: 5vh;
+		margin: 5vh 0;
 	}
 	.feature-product-title {
 		margin-bottom: 4vh;
@@ -255,6 +255,7 @@ $background-color_3: #E7E7E7;
 	.product-filter {
 		margin-top: 100px;
 		position: relative;		
+		padding: 10px 35px;
 	}
 	.Category-section {
 		h4 {

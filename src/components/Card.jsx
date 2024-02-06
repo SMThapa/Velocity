@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
 import axios from 'axios';
 import glass from '../assets/images/glass1.jpg';
+import { Link } from "react-router-dom";
 
 export const Card = (data) => {
 
@@ -54,7 +55,8 @@ export const Card = (data) => {
   };
 
   return (
-    <div className="card">
+    <Link to={`/shop/product/${data.data.id}`}>
+      <div className="card">
       <div className="image">
         <a href="">
           <img src={glass} alt="glass1" />
@@ -79,5 +81,6 @@ export const Card = (data) => {
         <p className="product-price">Rs. {data.data.product_price}</p>
       </div>
     </div>
+    </Link>
   )
 }

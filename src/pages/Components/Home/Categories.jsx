@@ -11,7 +11,7 @@ export const Categories = (Data) => {
     e.target.classList.remove('active')
   }
   return (
-    <div className="categories">
+    <div className="product-categories">
         <div className="centerContainer">
           <div className="cate-options">
             <p className="title">Shop <br />by Categories</p>

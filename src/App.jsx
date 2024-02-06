@@ -10,7 +10,7 @@ function App() {
 
   const [signedIn, setSignedIn] = useState(false)
 
-  console.log(sessionStorage.getItem('User'));
+  // console.log(sessionStorage.getItem('User'));
 
   useEffect(()=>{
     sessionStorage.length === 0 ? setSignedIn(false) : setSignedIn(true)

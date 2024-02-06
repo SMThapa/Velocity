@@ -72,7 +72,6 @@ $background-color_3: #f1f1f1;
         display:none !important;
     }
     .content {
-        padding: 10px 18px;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.25s ease-out;
@@ -80,6 +79,7 @@ $background-color_3: #f1f1f1;
     }
     .show-content{
         max-height: 100%;
+        padding: 10px 18px;
     }
     
 }
