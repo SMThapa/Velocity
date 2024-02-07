@@ -1,17 +1,16 @@
-// import '../style/footer.css';
 import '../style/Footer.scss';
-
+import { NavLink } from "react-router-dom";
 export const Footer = () => {
   return (
     <footer>
       <div className="footer-contents">
-        <div className="about-us">
-          <h1>About Us</h1>
-          <p><a href="">Our Shop</a></p>
-          <p><a href="">Contact</a></p>
-          <p><a href="">Artists</a></p>
-          <p><a href="">Local Giving</a></p>
-          <p><a href="">Press</a></p>
+      <div className="about-us">
+          <h1>Pages</h1>
+          <p><NavLink to='/shop'>Our Shop</NavLink></p>
+          <p><NavLink to='/aboutUs'>About us</NavLink></p>
+          <p><NavLink to='/partnerUs'>Partner with us</NavLink></p>
+          <p><NavLink to='/blog'>Blog</NavLink></p>
+          <p><NavLink to='/contact'>Contact</NavLink></p>
         </div>
         <div className="get-help">
           <h1>Get Help</h1>

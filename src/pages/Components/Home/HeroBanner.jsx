@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import banner1 from '../../../assets/images/banner1.jpg';
 import banner2 from '../../../assets/images/banner2.jpg';
 
@@ -12,7 +13,7 @@ export const HeroBanner = () => {
 
         <div className="bannerContent">
           <p className='bannerTitle'>New Arraivals</p>
-          <a href="">SEE MORE</a>
+          <Link to={'/shop'} className='primary-btn'>SEE MORE</Link>
         </div>
       </div>
 
@@ -23,7 +24,7 @@ export const HeroBanner = () => {
 
         <div className="bannerContent">
           <p className='bannerTitle'>New Arraivals</p>
-          <a href="">SEE MORE</a>
+          <Link to={'/shop'} className='primary-btn'>SEE MORE</Link>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const AboutUs = (Data) => {
   return (
     <div className="centerContainer">
@@ -15,7 +17,7 @@ export const AboutUs = (Data) => {
               PageMaker including versions of Lore
               m Ipsum.</p>
 
-              <a href="" className="primary-btn">Know more</a>
+              <Link to={'/aboutUs'} className="primary-btn">Know more</Link>
           </div>
         </div>
       </div>

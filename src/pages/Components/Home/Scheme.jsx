@@ -29,7 +29,9 @@ export const Scheme = (Data) => {
 
         <div className={`showCard ${show1 ? '' : 'hide'}`}>
           <img src={glass} alt="" />
-          <button className="primary-btn">Check Out</button>
+          <Link to={'/shop'}>
+            <button className="primary-btn">Check Out</button>
+          </Link>
           <div className="square"></div>
         </div>
       </div>
@@ -39,7 +41,9 @@ export const Scheme = (Data) => {
 
         <div className={`showCard ${show2 ? '' : 'hide'}`}>
           <img src={glass2} alt="" />
-          <button className="primary-btn">Check Out</button>
+          <Link to={'/shop'}>
+            <button className="primary-btn">Check Out</button>
+          </Link>
           <div className="square"></div>
         </div>
       </div>

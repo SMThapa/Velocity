@@ -15,12 +15,6 @@ import ecoCate from '../assets/images/img5.jpg';
 import streetCate from '../assets/images/img7.jpg';
 
 
-// usp images
-import usp1 from '../assets/USP/usp1.png';
-import usp2 from '../assets/USP/usp2.png';
-import usp3 from '../assets/USP/usp3.png';
-
-
 import '../style/Home.scss';
 import { Link } from "react-router-dom";
 
@@ -60,12 +54,31 @@ export const Home = () => {
       <PartnerSchemeSlider/>
 
       <div className="OurUSP">
-        {/* <p className="title">Our USP</p> */}
+        <p className="title">Our USP</p>
         <div className="uspCards">
-          <UspCard img={usp1}/>
-          <UspCard img={usp2}/>
-          <UspCard img={usp3}/>
-          <UspCard img={usp1}/>
+          <div className="usp">
+            <i className="bi bi-gift"></i>
+            <div className="usp-title">Genuine Product</div>
+            <div className="usp-text">Sed molestie tempus neque, ac mollis nulla fermentum at.</div>
+          </div>
+
+          <div className="usp">
+          <i className="bi bi-credit-card"></i>
+            <div className="usp-title">Flexible Credit Period</div>
+            <div className="usp-text">Sed molestie tempus neque, ac mollis nulla fermentum at.</div>
+          </div>
+
+          <div className="usp">
+            <i className="bi bi-truck"></i>
+            <div className="usp-title">Swift Delivery</div>
+            <div className="usp-text">Sed molestie tempus neque, ac mollis nulla fermentum at.</div>
+          </div>
+          
+          <div className="usp">
+            <i className="bi bi-info-circle"></i>
+            <div className="usp-title">Training and Support</div>
+            <div className="usp-text">Sed molestie tempus neque, ac mollis nulla fermentum at.</div>
+          </div>
         </div>
       </div>
 
