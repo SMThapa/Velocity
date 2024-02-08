@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { ProductCarousel } from "../components";
 import axios from "axios";
 import '../style/Product-single.scss'
-import img from '../assets/images/img9.jpg'
+import { ImgSlider } from "./Components/ProductSingleImage/ImgSlider";
+
 
 export const ProductSingle = () => {
 
@@ -26,15 +27,12 @@ export const ProductSingle = () => {
           })
     },[id])
 
-    const [count, setCount] = useState(1)
-
   return (
     <div className="single-product">
         <div className="product">
             <div className="product-image">
-                <div className="image-carousel"></div>
-                <div className="main-image">
-                    <img src={img} alt="" />
+                <div className="image-carousel">
+                    <ImgSlider/>
                 </div>
             </div>
             <div className="product-details">
@@ -52,12 +50,11 @@ export const ProductSingle = () => {
 
                 <div className="actions">
                     <div className="action-buttons">
-                        <div className="quantity-count "><i onClick={()=>count >=2 ? setCount(count - 1): setCount(count)} className="bi bi-dash-lg"></i>{count}<i onClick={()=>setCount(count+1)} className="bi bi-plus-lg"></i></div>
                         <div className="action-btn primary-btn">Add to Cart</div>
-                        <div className="wishlist"><i className="bi bi-heart"></i></div>
+                        <div className="wishlist">Add to WishList</div>
                     </div>
 
-                    <div className="action-btn primary-btn">Buy Now</div>
+                    {/* <div className="action-btn primary-btn">Buy Now</div> */}
                 </div>
 
                 <div className="delivery-policy">
