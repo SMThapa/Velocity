@@ -24,7 +24,14 @@ export const UserProfile = () => {
           <p className='live-chat-message'>*Live chat is disabled right now.*</p>
           <div className="chat">
             <div className="messages">
-              <div className="messages-content"></div>
+              <div className="messages-content">
+                <div className="msg admin">
+                  <p className="messenger">Admin, </p>
+                    <div className="msg-chat">
+                      <p className="">Please submit a scanned copy of your pan and aadhar documents!</p>
+                    </div>
+                </div>
+              </div>
             </div>
             <div className="message-box">
               <textarea type="text" className="message-input" placeholder="Type message..."></textarea>

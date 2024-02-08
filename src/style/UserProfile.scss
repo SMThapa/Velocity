@@ -142,18 +142,39 @@
         Messages
         --------------------*/
         .messages {
-        flex: 1 1 auto;
-        color: rgba(255, 255, 255, .5);
-        overflow: hidden;
-        position: relative;
-        width: 100%;
+            flex: 1 1 auto;
+            color: rgba(255, 255, 255, .5);
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: 25px;
         
         & .messages-content {
-            position: absolute;
-            top: 0;
-            left: 0;
             height: 101%;
             width: 100%;
+            .msg {
+                display: flex;
+                flex-direction: column;
+
+                .messenger {
+                    font-size: 12px;
+                    margin-bottom: 4px;
+                }
+                p {
+                    margin: 0;
+                    color: black;
+                }
+                .msg-chat {
+                    background-color: #e2e2e2;
+                    border-radius: 0 15px 15px;
+                    padding: 10px;
+                    max-width: 70%;
+                }
+                .msg-chat p {
+                    color: #333;
+                    margin: 0;
+                }
+            }
         }
 
         
